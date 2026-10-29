@@ -1,0 +1,191 @@
+{
+  "fictional": true,
+  "title_bn": "সবুজ পাঠাগারে সদস্য হওয়ার আবেদন",
+  "title_en": "Joining Shobuj Library",
+  "saved_on": "2026-10-22",
+  "source_text": "কাল্পনিক উদাহরণ — সবুজ পাঠাগার; সরকারি সেবা নয়।\nসদস্য হতে অনলাইনে ফরম জমা দিন।\nফরমের সঙ্গে ১ কপি ছবি দিন।\nসদস্য ফি ১০০ টাকা; শিক্ষার্থীদের ফি লাগবে না।\nআবেদনের শেষ দিন ৩০ নভেম্বর ২০২৬।",
+  "analyses": {
+    "bn": {
+      "explanation": [
+        {
+          "text": "শিক্ষার্থীদের সদস্য ফি লাগে না; অন্য সদস্যদের ফি ১০০ টাকা।",
+          "evidence_ids": [
+            "e3"
+          ],
+          "status": "source_stated"
+        }
+      ],
+      "steps": [
+        {
+          "text": "অনলাইনে সদস্য হওয়ার ফরম জমা দিন।",
+          "evidence_ids": [
+            "e1"
+          ],
+          "status": "source_stated"
+        },
+        {
+          "text": "ফরমের সঙ্গে ১ কপি ছবি দিন।",
+          "evidence_ids": [
+            "e2"
+          ],
+          "status": "source_stated"
+        }
+      ],
+      "documents": [
+        {
+          "text": "ফরমের সঙ্গে ১ কপি ছবি।",
+          "evidence_ids": [
+            "e2"
+          ],
+          "status": "source_stated"
+        }
+      ],
+      "fees_and_deadlines": {
+        "fees": [
+          {
+            "text": "সদস্য ফি ১০০ টাকা; শিক্ষার্থীদের ফি লাগে না।",
+            "evidence_ids": [
+              "e3"
+            ],
+            "status": "source_stated"
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "আবেদনের শেষ দিন ৩০ নভেম্বর ২০২৬।",
+            "evidence_ids": [
+              "e4"
+            ],
+            "status": "source_stated"
+          }
+        ]
+      },
+      "unknowns": [
+        {
+          "kind": "missing",
+          "text": "কারা সদস্য হতে পারবেন, তা এই নমুনায় বলা নেই।",
+          "evidence_ids": []
+        }
+      ],
+      "evidence": [
+        {
+          "id": "e1",
+          "excerpt": "সদস্য হতে অনলাইনে ফরম জমা দিন।"
+        },
+        {
+          "id": "e2",
+          "excerpt": "ফরমের সঙ্গে ১ কপি ছবি দিন।"
+        },
+        {
+          "id": "e3",
+          "excerpt": "সদস্য ফি ১০০ টাকা; শিক্ষার্থীদের ফি লাগবে না।"
+        },
+        {
+          "id": "e4",
+          "excerpt": "আবেদনের শেষ দিন ৩০ নভেম্বর ২০২৬।"
+        }
+      ]
+    },
+    "en": {
+      "explanation": [
+        {
+          "text": "Students pay no membership fee; other members pay Tk 100.",
+          "evidence_ids": [
+            "e3"
+          ],
+          "status": "source_stated"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Submit the membership form online.",
+          "evidence_ids": [
+            "e1"
+          ],
+          "status": "source_stated"
+        },
+        {
+          "text": "Provide one photo with the form.",
+          "evidence_ids": [
+            "e2"
+          ],
+          "status": "source_stated"
+        }
+      ],
+      "documents": [
+        {
+          "text": "One photo with the form.",
+          "evidence_ids": [
+            "e2"
+          ],
+          "status": "source_stated"
+        }
+      ],
+      "fees_and_deadlines": {
+        "fees": [
+          {
+            "text": "Membership costs Tk 100; students are exempt.",
+            "evidence_ids": [
+              "e3"
+            ],
+            "status": "source_stated"
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "Apply by 30 November 2026.",
+            "evidence_ids": [
+              "e4"
+            ],
+            "status": "source_stated"
+          }
+        ]
+      },
+      "unknowns": [
+        {
+          "kind": "missing",
+          "text": "This sample does not state who is eligible for membership.",
+          "evidence_ids": []
+        }
+      ],
+      "evidence": [
+        {
+          "id": "e1",
+          "excerpt": "সদস্য হতে অনলাইনে ফরম জমা দিন।"
+        },
+        {
+          "id": "e2",
+          "excerpt": "ফরমের সঙ্গে ১ কপি ছবি দিন।"
+        },
+        {
+          "id": "e3",
+          "excerpt": "সদস্য ফি ১০০ টাকা; শিক্ষার্থীদের ফি লাগবে না।"
+        },
+        {
+          "id": "e4",
+          "excerpt": "আবেদনের শেষ দিন ৩০ নভেম্বর ২০২৬।"
+        }
+      ]
+    }
+  },
+  "student_explanation": {
+    "bn": {
+      "text": "এই কাল্পনিক নমুনায় শিক্ষার্থীদের ফি নেই; অনলাইনে ফরম ও ১ কপি ছবি দিতে হবে।",
+      "evidence_ids": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "status": "source_stated"
+    },
+    "en": {
+      "text": "In this fictional sample, students pay no fee; they still submit the form online with one photo.",
+      "evidence_ids": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "status": "source_stated"
+    }
+  }
+}

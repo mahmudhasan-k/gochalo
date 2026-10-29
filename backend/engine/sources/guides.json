@@ -1,0 +1,96 @@
+[
+  {
+    "id": "passport-start",
+    "title_bn": "ই-পাসপোর্ট: অনলাইনে ফরম",
+    "title_en": "E-passport: online form",
+    "url": "https://www.epassport.gov.bd/instructions/instructions",
+    "text": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।\nই-পাসপোর্ট আবেদনের ক্ষেত্রে কোন কাগজপত্র সত্যায়ন করার প্রয়োজন হবে না।",
+    "scope_bn": "ফরম পূরণ ও সত্যায়ন নিয়ে সংক্ষিপ্ত অংশ; সম্পূর্ণ আবেদন নির্দেশিকা নয়।",
+    "scope_en": "A short passage on the form and attestation, not the full application guide.",
+    "reviewed_on": "2026-10-22",
+    "review_basis": "Official portal indexed text reviewed against the existing saved official sentence. Direct fetch returned a JavaScript shell. No live freshness claim.",
+    "topics": [
+      "পাসপোর্ট",
+      "passport",
+      "passports"
+    ],
+    "intents": [
+      "ফরম",
+      "ফর্ম",
+      "আবেদন",
+      "সত্যা",
+      "শুরু",
+      "অনলাইন",
+      "form",
+      "apply",
+      "application",
+      "attest",
+      "start",
+      "online",
+      "forms",
+      "applying",
+      "applications",
+      "attestation",
+      "attested",
+      "attesting"
+    ]
+  },
+  {
+    "id": "birth-submit",
+    "title_bn": "জন্ম নিবন্ধন: ফরম জমা দেওয়ার আগে",
+    "title_en": "Birth registration: before submitting",
+    "url": "https://bdris.gov.bd/br/application",
+    "text": "মনে রাখবেন একবার সাবমিট করা হয়ে গেলে আবেদনপত্রটিতে আর এডিট করার সুযোগ থাকবে না।",
+    "scope_bn": "জন্ম নিবন্ধনের অনলাইন আবেদনপত্র সাবমিট করার সতর্কতা; সনদ সংশোধনের নিয়ম নয়।",
+    "scope_en": "A warning about the submitted online application form, not certificate correction rules.",
+    "reviewed_on": "2026-10-22",
+    "review_basis": "Official BDRIS application page indexed text reviewed. Direct fetch returned 403. Current portal availability is not verified.",
+    "topics": [
+      "জন্ম",
+      "birth"
+    ],
+    "intents": [
+      "সাবমিট",
+      "জমা",
+      "এডিট",
+      "সম্পাদন",
+      "submit",
+      "edit",
+      "form",
+      "forms",
+      "submitted",
+      "submitting",
+      "submission",
+      "edited",
+      "editing"
+    ]
+  },
+  {
+    "id": "hossainpur-voter",
+    "title_bn": "হোসেনপুর: নতুন ভোটারের কাগজপত্র",
+    "title_en": "Hossainpur: new-voter documents",
+    "url": "https://ec.hossainpur.kishoreganj.gov.bd/pages/static-pages/6995e32135ce18e1c07b32d0",
+    "text": "স্বামী/স্ত্রীর জাতীয় পরিচয়পত্রের ফটোকপি (বিবাহিত পুরুষ/মহিলার ক্ষেত্রে)\nপাসপোর্টের ফটোকপি (প্রবাসী ভোটারদের ক্ষেত্রে)",
+    "scope_bn": "হোসেনপুর, কিশোরগঞ্জের নির্বাচন অফিসের তালিকার দুটি শর্তযুক্ত বিষয়; সারা দেশের সম্পূর্ণ তালিকা নয়।",
+    "scope_en": "Two conditional items from the Hossainpur, Kishoreganj election office list; not a complete national checklist.",
+    "reviewed_on": "2026-10-22",
+    "review_basis": "Official local election-office page read directly, items 5 and 9. Page states last updated 2024-02-06. Applicability outside this office is not established.",
+    "topics": [
+      "হোসেনপুর",
+      "hossainpur"
+    ],
+    "intents": [
+      "ভোটার",
+      "কাগজ",
+      "প্রবাসী",
+      "বিবাহিত",
+      "voter",
+      "document",
+      "married",
+      "expatriate",
+      "voters",
+      "documents",
+      "expatriates"
+    ]
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "title_bn": "ই-পাসপোর্টের অনলাইন আবেদন: প্রস্তুত উদাহরণ",
+  "source_url": "https://www.epassport.gov.bd/instructions/instructions",
+  "saved_on": "2026-10-21",
+  "source_text": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।",
+  "analysis": {
+    "explanation": [
+      {
+        "text": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যায়।",
+        "evidence_ids": ["e1"],
+        "status": "source_stated"
+      }
+    ],
+    "steps": [
+      {
+        "text": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করুন।",
+        "evidence_ids": ["e1"],
+        "status": "source_stated"
+      }
+    ],
+    "documents": [],
+    "fees_and_deadlines": {"fees": [], "deadlines": []},
+    "unknowns": [
+      {
+        "kind": "unverified",
+        "text": "এই উদাহরণে সরকারি পোর্টালের একটি বাক্য ব্যবহার করা হয়েছে। এটি সম্পূর্ণ আবেদন নির্দেশিকা নয়। পরের ধাপ, যোগ্যতা ও বর্তমান শর্ত জানতে মূল সরকারি নির্দেশনা দেখুন।",
+        "evidence_ids": []
+      }
+    ],
+    "evidence": [
+      {"id": "e1", "excerpt": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।"}
+    ]
+  }
+}

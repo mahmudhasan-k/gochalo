@@ -1,0 +1,363 @@
+{
+  "purpose": "Bounded Gemini 3.8 Flash evaluation against unchanged corrected P1 and saved official e-Passport sources. Both generation requests failed before output; no semantic acceptance is claimed.",
+  "recorded_at": "2026-10-22T11:09:39.220371+00:00",
+  "application_baseline": "8584fb7e87bf14d15110ba1378afce02f92aea1d",
+  "requested_model": "gemini-3.8-flash",
+  "sdk_version": "2.32.0",
+  "api_version": "v1beta",
+  "parameters": {
+    "temperature": 0,
+    "max_output_tokens": 8192,
+    "timeout_ms": 60000,
+    "maximum_attempts_per_request": 1,
+    "schema_mode": "response_json_schema",
+    "output_language": "bn"
+  },
+  "authorization_limit": 4,
+  "actual_requests": 3,
+  "attempts": [
+    {
+      "phase": "corrected_p1:generation",
+      "started_at": "2026-10-22T11:09:39.220371+00:00",
+      "http_status": 504,
+      "elapsed_seconds": 59.078
+    },
+    {
+      "phase": "official_epassport:generation",
+      "started_at": "2026-10-22T11:11:53.064081+00:00",
+      "http_status": 503,
+      "elapsed_seconds": 3.156
+    },
+    {
+      "phase": "model_metadata",
+      "method": "GET",
+      "started_at": "2026-10-22T11:18:28.763592+00:00",
+      "http_status": 200,
+      "elapsed_seconds": 0.5
+    }
+  ],
+  "project_configuration": {
+    "primary_default": "gemini-3.5-flash-lite",
+    "existing_local_model_setting": "gemini-3.5-flash-lite",
+    "evaluation_override": "gemini-3.8-flash (in-process only)",
+    "openrouter_model": "qwen/qwen3.8-27b:free",
+    "openrouter_key_configured_in_existing_local_secrets": false
+  },
+  "free_tier": {
+    "published_standard_tier_available": true,
+    "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "model_source": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash",
+    "checked_on": "2026-10-22",
+    "existing_project_availability": "unconfirmed for free-tier inference: authenticated model metadata is visible (HTTP 200), but generation returned HTTP 504 and 503",
+    "project_billing_state": "not independently inspected",
+    "billing_changes": false
+  },
+  "cases": {
+    "corrected_p1": {
+      "source_fixture": "p1_gemini35_corrected_review.json",
+      "source_sha256": "fb2ef2665f1adfa311cdfff931657e6c7f38b7b9a84582a13aac79962e29077e",
+      "status": "failed",
+      "error_code": "timeout",
+      "diagnostics": {
+        "http_status": 504,
+        "error_code": 504,
+        "error_status": "DEADLINE_EXCEEDED",
+        "message": "The provider returned an error; unrecognized details omitted for privacy.",
+        "model": "gemini-3.8-flash",
+        "sdk_version": "2.32.0",
+        "api_version": "v1beta",
+        "operation": "generateContent",
+        "schema_mode": "response_json_schema",
+        "timeout_ms": 60000,
+        "maximum_attempts": 1
+      },
+      "workflow_elapsed_seconds": 59.375,
+      "generation": {
+        "http_status": 504,
+        "raw_provider_text": null,
+        "schema_valid": null,
+        "schema_assessment": "not evaluable: no generated output",
+        "usage": null,
+        "usage_assessment": "provider did not report usage; unknown, not zero"
+      },
+      "review": {
+        "status": "not requested",
+        "reason": "generation returned no usable output",
+        "requests": 0
+      },
+      "independent_assessment": {
+        "method": "Compare raw generation against unchanged source expectations, independently of model review. Not performed because no raw generation was returned.",
+        "outcome": "not_assessed_no_output",
+        "criteria": [
+          {
+            "number": 1,
+            "criterion": "Eligibility is BOTH local resident AND current student, never OR or either condition alone.",
+            "outcome": "not_assessed_no_output"
+          },
+          {
+            "number": 2,
+            "criterion": "Any standalone application instruction retains the stated eligibility scope.",
+            "outcome": "not_assessed_no_output"
+          },
+          {
+            "number": 3,
+            "criterion": "Working mobile number is information to enter, not a required document.",
+            "outcome": "not_assessed_no_output"
+          },
+          {
+            "number": 4,
+            "criterion": "Do not require an NID copy; retain the explicit negative requirement accurately if mentioned.",
+            "outcome": "not_assessed_no_output"
+          },
+          {
+            "number": 5,
+            "criterion": "Student certificate OR institution attestation, only if not already submitted; never both or unconditional resubmission.",
+            "outcome": "not_assessed_no_output"
+          },
+          {
+            "number": 6,
+            "criterion": "Fee exactly ২০০ টাকা WITH exemption for applicants with disabilities; any standalone payment instruction preserves the exemption.",
+            "outcome": "not_assessed_no_output"
+          },
+          {
+            "number": 7,
+            "criterion": "Fee exemption does not waive application-form submission.",
+            "outcome": "not_assessed_no_output"
+          },
+          {
+            "number": 8,
+            "criterion": "Deadline unavailable, never unlimited or invented; no false missing-fee/documents notice.",
+            "outcome": "not_assessed_no_output"
+          },
+          {
+            "number": 9,
+            "criterion": "Strict six-field schema, exact quotations AND full semantic support; natural Bangla with intact negation, scope and exceptions.",
+            "outcome": "not_assessed_no_output"
+          }
+        ]
+      },
+      "baseline_evaluation": {
+        "outcome": "all nine criteria pass for this single corrected run",
+        "basis": "Manual comparison with the unchanged source/expectations and focused offline assertions; Gemini self-review is preserved but is not independent proof.",
+        "criteria": [
+          {
+            "number": 1,
+            "criterion": "Eligibility is BOTH local resident AND current student, never OR or either condition alone.",
+            "outcome": "pass",
+            "evidence": "Both district residence AND current-student status are explicit; no broadened eligibility."
+          },
+          {
+            "number": 2,
+            "criterion": "Any standalone application instruction retains the stated eligibility scope.",
+            "outcome": "pass",
+            "evidence": "All standalone steps, document and fee items repeat both global conditions and cite e2."
+          },
+          {
+            "number": 3,
+            "criterion": "Working mobile number is information to enter, not a required document.",
+            "outcome": "pass",
+            "evidence": "Working mobile number is an entry step; no document submission is inferred from it."
+          },
+          {
+            "number": 4,
+            "criterion": "Do not require an NID copy; retain the explicit negative requirement accurately if mentioned.",
+            "outcome": "pass",
+            "evidence": "No NID-copy requirement is generated; its explicit negative source quotation remains unchanged."
+          },
+          {
+            "number": 5,
+            "criterion": "Student certificate OR institution attestation, only if not already submitted; never both or unconditional resubmission.",
+            "outcome": "pass",
+            "evidence": "Certificate A OR B and the not-previously-submitted condition are preserved in both step and document items."
+          },
+          {
+            "number": 6,
+            "criterion": "Fee exactly ২০০ টাকা WITH exemption for applicants with disabilities; any standalone payment instruction preserves the exemption.",
+            "outcome": "pass",
+            "evidence": "Fee is exactly ২০০ টাকা; the payment step excludes disabled applicants and the fee item states their exemption. The app conservatively withholds the valid payment step, retaining the correct fee item."
+          },
+          {
+            "number": 7,
+            "criterion": "Fee exemption does not waive application-form submission.",
+            "outcome": "pass",
+            "evidence": "The general form step applies to all eligible applicants even when no fee is due; no prior-certificate or disability-only condition is attached."
+          },
+          {
+            "number": 8,
+            "criterion": "Deadline unavailable, never unlimited or invented; no false missing-fee/documents notice.",
+            "outcome": "pass",
+            "evidence": "Deadline is unavailable, not unlimited; no false missing-fee or missing-document notice."
+          },
+          {
+            "number": 9,
+            "criterion": "Strict six-field schema, exact quotations AND full semantic support; natural Bangla with intact negation, scope and exceptions.",
+            "outcome": "pass",
+            "evidence": "Strict six-field schema, all generation/review quotes match the source; natural Bangla preserves negation, scope, alternatives and exceptions."
+          }
+        ],
+        "limits": "One synthetic fixture and one run; does not establish general semantic reliability, source authenticity, repeatability or Cloud readiness.",
+        "offline_followup": "Corrected false coverage warning caused by optional শুধু left behind after removing global eligibility; claim approval unchanged. No further live calls used."
+      }
+    },
+    "official_epassport": {
+      "source_fixture": "epassport_gemini35_corrected_review.json",
+      "source_sha256": "5b25f1642aa12c84fd63168bdb22c08bb7ae5173f626d7c11221f772a110fdd8",
+      "status": "failed",
+      "error_code": "service_busy",
+      "diagnostics": {
+        "http_status": 503,
+        "error_code": 503,
+        "error_status": "UNAVAILABLE",
+        "message": "The provider returned an error; unrecognized details omitted for privacy.",
+        "model": "gemini-3.8-flash",
+        "sdk_version": "2.32.0",
+        "api_version": "v1beta",
+        "operation": "generateContent",
+        "schema_mode": "response_json_schema",
+        "timeout_ms": 60000,
+        "maximum_attempts": 1
+      },
+      "workflow_elapsed_seconds": 3.453,
+      "generation": {
+        "http_status": 503,
+        "raw_provider_text": null,
+        "schema_valid": null,
+        "schema_assessment": "not evaluable: no generated output",
+        "usage": null,
+        "usage_assessment": "provider did not report usage; unknown, not zero"
+      },
+      "review": {
+        "status": "not requested",
+        "reason": "generation returned no usable output",
+        "requests": 0
+      },
+      "independent_assessment": {
+        "method": "Compare raw generation against unchanged source expectations, independently of model review. Not performed because no raw generation was returned.",
+        "outcome": "not_assessed_no_output",
+        "categories": {
+          "document_scope": "not_assessed_no_output",
+          "eligibility_alternatives": "not_assessed_no_output",
+          "parent_nid_number": "not_assessed_no_output",
+          "fee_terms": "not_assessed_no_output",
+          "delivery_conditions_and_tiers": "not_assessed_no_output",
+          "missing_subcategories": "not_assessed_no_output",
+          "quotation_integrity": "not_assessed_no_output"
+        }
+      },
+      "baseline_evaluation": {
+        "raw_semantic_acceptance": "failed",
+        "guarded_known_case_containment": "passed",
+        "general_semantic_reliability": "unproven",
+        "document_scope": {
+          "raw": "failed",
+          "unsafe_claim_ids": [
+            "steps:10",
+            "documents:7"
+          ],
+          "guarded": "withheld",
+          "reason": "Clause 18 originals were restated without clause 6 age alternatives or foreign-mission applicability; the reviewer wrongly approved both."
+        },
+        "foreign_mission_alternative": {
+          "raw": "passed",
+          "claim_ids": [
+            "steps:2",
+            "documents:2"
+          ],
+          "guarded": "conservatively_withheld",
+          "reason": "BRC is correctly described as acceptable, not mandatory; overlapping document clauses still cause conservative withholding."
+        },
+        "parent_nid_number": {
+          "raw": "passed",
+          "guarded": "passed",
+          "claim_id": "steps:1",
+          "reason": "Under-18/no-own-NID condition and father OR mother number retained; no new parent-document requirement."
+        },
+        "fee_routing": {
+          "raw": "passed",
+          "guarded": "passed_with_duplication",
+          "reason": "Explicit fee item preserves VAT/conditional extra charges/domestic versus foreign payment terms; no numeric amount invented. The overview repeats those terms and app routing produces two fee items."
+        },
+        "missing_subcategories": {
+          "raw": "passed",
+          "guarded": "passed",
+          "reason": "Only fee amount and application submission cutoff are reported missing; neither whole fee absence nor unlimited time is asserted."
+        },
+        "delivery_times": {
+          "raw": "passed",
+          "guarded": "passed",
+          "reason": "All three domestic 2/7/15-business-day tiers and other-information-correct condition remain in timeframes, never application cutoffs."
+        },
+        "quotation_integrity": {
+          "raw": "failed",
+          "guarded": "passed",
+          "unmatched_generation_evidence": [
+            "e21"
+          ],
+          "withheld_claim_ids": [
+            "steps:13",
+            "documents:10"
+          ],
+          "reason": "The generation changed source spelling ব্যাকগ্রউন্ড to ব্যাকগ্রাউন্ড. Correct reviewer excerpts cannot override failed original literal checks."
+        },
+        "guarded_counts": {
+          "retained": 26,
+          "withheld": 11
+        },
+        "remaining_limits": [
+          "Single saved public source, no fresh retrieval or authenticity check.",
+          "Same-provider review is not independent correctness proof.",
+          "Valid age/GO/NOC/photo claims are conservatively held or lose their original quote match.",
+          "Duplicate fee presentation remains; this is not a complete passport checklist."
+        ],
+        "assessment_method": "Direct comparison of every factual claim with the saved source, separately from Gemini verdicts; historical fixture expectations unchanged."
+      }
+    }
+  },
+  "selection": {
+    "primary": "gemini-3.5-flash-lite",
+    "action": "retain current configuration",
+    "basis": "No completed Gemini 3.8 generation or review; no evidence of improved accuracy, and both attempts failed within the current release workflow. This does not establish permanent model unavailability or a semantic failure.",
+    "openrouter_fallback": "unchanged",
+    "semantic_guards": "unchanged",
+    "image_extraction": "unchanged; no image fidelity evaluation performed"
+  },
+  "network_boundaries": {
+    "jina_requests": 0,
+    "openrouter_requests": 0,
+    "retry_requests": 0,
+    "billing_calls": 0,
+    "credential_changes": false,
+    "production_changes": false
+  },
+  "validation_limits": [
+    "Only one generation attempt per saved case; no retries.",
+    "No generated answer exists to score schema, quotation fidelity, document/eligibility scope, fees or delivery times.",
+    "Token usage was not returned and must not be treated as zero.",
+    "Published free-tier pricing does not independently prove this project billing tier or remaining quota.",
+    "Raw semantic improvement, same-provider review quality, image extraction and Cloud behavior remain unverified.",
+    "One authenticated metadata lookup confirmed model visibility and generateContent support, not successful generation or project billing/quota."
+  ],
+  "actual_inference_requests": 2,
+  "actual_metadata_requests": 1,
+  "metadata_lookup": {
+    "operation": "models.get",
+    "model": "gemini-3.8-flash",
+    "maximum_attempts": 1,
+    "inference_request": false,
+    "billing_changes": false,
+    "http_status": 200,
+    "status": "metadata_available",
+    "metadata": {
+      "name": "models/gemini-3.8-flash",
+      "version": "3.0",
+      "input_token_limit": 1048576,
+      "output_token_limit": 65536,
+      "supported_actions": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  }
+}

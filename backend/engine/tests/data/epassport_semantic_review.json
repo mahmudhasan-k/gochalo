@@ -1,0 +1,879 @@
+{
+  "purpose": "Real generation/review counterexample: two HTTP 200 responses still accepted scope ambiguity and a false whole-fee absence notice.",
+  "recorded_model": "gemini-3.5-flash-lite",
+  "source": "# ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:\n\nLast updated: 3 August 2026\n\n১। ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।\n\n২। ই-পাসপোর্ট আবেদনের ক্ষেত্রে কোন কাগজপত্র সত্যায়ন করার প্রয়োজন হবে না।\n\n৩। ই-পাসপোর্ট ফরমে কোন ছবি সংযোজন এবং তা সত্যায়নের প্রয়োজন হবে না।\n\n৪। জাতীয় ‍পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) অনুযায়ী আবেদন পত্র পূরণ করতে হবে।\n\n৫। অপ্রাপ্ত বয়স্ক (১৮ বছরের কম) আবেদনকারী যার জাতীয় পরিচয়পত্র (NID) নাই, তার পিতা অথবা মাতার জাতীয় পরিচয়পত্র (NID) নম্বর অবশ্যই উল্লেখ করতে হবে।\n\n৬। জাতীয় ‍পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) নিম্নোক্ত বয়স অনুসারে দাখিল করতে হবে-\n\n(ক) ১৮ বছরের নিম্নে হলে অনলাইন জন্মনিবন্ধন সনদ (BRC English Version)।\n\n(খ) ১৮-২০ বছর হলে জাতীয় ‍পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version)।\n\n(গ) ২০ বছরের উর্ধে হলে জাতীয় ‍পরিচয়পত্র (NID) আবশ্যক । তবে বিদেশস্থ বাংলাদেশ মিশন হতে আবেদনের ক্ষেত্রে অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) গ্রহণযোগ্য হবে।\n\n৭। তারকা চিহ্নিত ক্রমিক নম্বরগুলো অবশ্যই পূরণীয়।\n\n৮। দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে পাসপোর্টের আবেদনের সাথে সুরক্ষা সেবা বিভাগ, স্বরাষ্ট্র মন্ত্রণালয় হতে জারিকৃত আদেশ দাখিল করতে হবে।\n\n৯। আবেদন বর্তমান ঠিকানা সংশ্লিষ্ঠ বিভাগীয় পাসপোর্ট ও ভিসা অফিস/আঞ্চলিক পাসপোর্ট অফিস/বিদেশস্থ বাংলাদেশ মিশনে দাখিল করতে হবে।\n\n১০। ১৮ বছরের নিম্নের সকল আবেদনে ই-পাসপোর্টের মেয়াদ হবে ০৫ বছর এবং ৪৮ পৃষ্ঠার।\n\n১১। প্রাসঙ্গিক টেকনিক্যাল সনদসমূহ (যেমন: ডাক্তার, ইঞ্জিনিয়ার, ড্রাইভার ইত্যাদি) আপলোড/সংযোজন করতে হবে।\n\n১২। প্রযোজ্য ক্ষেত্রে প্রাসঙ্গিক জিও (GO)/এনওসি (NOC)/ প্রত্যয়নপত্র/ অবসরোত্তর ছুটির আদেশ (PRL Order)/ পেনশন বই আপলোড/সংযোজন করতে হবে যা ইস্যুকারী কর্তৃপক্ষের নিজ নিজ Website এ আপলোড থাকতে হবে।\n\n১৩। প্রযোজ্য ক্ষেত্রে বিবাহ সনদ/নিকাহনামা এবং বিবাহ বিচ্ছেদের ক্ষেত্রে তালাকনামা দাখিল করতে হবে।\n\n১৪। দেশের অভ্যন্তরে আবেদনের ক্ষেত্রে প্রযোজ্য ফি এর উপর নির্ধারিত হারে ভ্যাট (VAT) সহ অন্যান্য চার্জ (যদি থাকে) অতিরিক্ত হিসাবে প্রদেয় হবে। বিদেশে আবেদনের ক্ষেত্রেও সরকার কর্তৃক নির্ধারিত ফি প্রদেয় হবে।\n\n১৫। কূটনৈতিক পাসপোর্টের জন্য পররাষ্ট্র মন্ত্রণালয়ের কনস্যুলার ও ওয়েলফেয়ার উইং (Consular and Welfare Wing) অথবা ইমিগ্রেশন ও পাসপোর্ট অধিদপ্তরের প্রধান কার্যালয় বরাবর আবেদনপত্র দাখিল করতে হবে।\n\n১৬। বৈদেশিক মিশন হতে নতুন পাসপোর্টের জন্য আবেদন করা হলে স্থায়ী ঠিকানার কলামে বাংলাদেশের যোগাযোগের ঠিকানা উল্লেখ করতে হবে।\n\n১৭। (ক) দেশের অভ্যন্তরে অতি জরুরী পাসপোর্ট প্রাপ্তির লক্ষ্যে অন্যান্য সকল তথ্য সঠিক থাকা সাপেক্ষে ২ কর্মদিবসের মধ্যে পাসপোর্ট প্রদান করা হবে।\n\n(খ) দেশের অভ্যন্তরে জরুরী পাসপোর্ট প্রাপ্তির লক্ষ্যে অন্যান্য সকল তথ্য সঠিক থাকা সাপেক্ষে ৭ কর্মদিবসের মধ্যে পাসপোর্ট প্রদান করা হবে।\n\n(গ) দেশের অভ্যন্তরে রেগুলার পাসপোর্ট প্রাপ্তির লক্ষ্যে অন্যান্য সকল তথ্য সঠিক থাকা সাপেক্ষে ১৫ কর্মদিবসের মধ্যে পাসপোর্ট প্রদান করা হবে।\n\n১৮।আবেদনের সময় মূল জাতীয় ‍পরিচয়পত্র (NID), অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) এবং প্রযোজ্য ক্ষেত্রে টেকনিক্যাল সনদ, সরকারি আদেশ (GO)/অনাপত্তি (NOC) প্রদর্শন/দাখিল করতে হবে।\n\n১৯। পাসপোর্ট রি-ইস্যুর ক্ষেত্রে মূল পাসপোর্ট প্রদর্শন করতে হবে।\n\n২০। হারানো পাসপোর্টের ক্ষেত্রে মূল জিডির কপি প্রদর্শন/দাখিল করতে হবে। পাসপোর্ট হারিয়ে গেলে অথবা চুরি হলে দ্রুত নিকটস্থ থানায় জিডি করতে হবে। পুনরায় পাসপোর্টের জন্য আবেদনের সময় পুরাতন পাসপোর্টের ফটোকপি এবং জিডি কপিসহ আবেদনপত্র দাখিল করতে হবে ।\n\n২১।০৬ বছর বয়সের নিম্নের আবেদনের ক্ষেত্রে ৩ আর (3R Size) সাইজের ( ল্যাব প্রিন্ট গ্রে ব্যাকগ্রউন্ড ) ছবি দাখিল করতে হবে।\n\n  \n\n  \n\n**তথ্য সূত্রঃ**\n\n#### **বহিরাগমন শাখা ১ , সুরক্ষা সেবা বিভাগ , স্বরাষ্ট্র মন্ত্রণালয়স্মারক নং ৫৮.০০.০০০০.০৪০.০১.০০৩.১৬-১২৩৪**\n\n**নিরাপত্তা ও বহিরাগমন অনুবিভাগ,**\n\n**৫৮.০০.০০০.০৪৩.৯৯.০২২.২২.২২ (৬৫ বছর উর্ধ বয়সী নাগরিকের ০৫ বছরের পাসপোর্ট হবার শর্তটি বাতিল) -ক্রমিক নং ১০।**",
+  "provider_output": {
+    "explanation": [
+      {
+        "text": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।",
+        "evidence_ids": [
+          "e1"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "ই-পাসপোর্ট আবেদনের ক্ষেত্রে কোন কাগজপত্র সত্যায়ন করার প্রয়োজন হবে না।",
+        "evidence_ids": [
+          "e2"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "ই-পাসপোর্ট ফরমে কোন ছবি সংযোজন এবং তা সত্যায়নের প্রয়োজন হবে না।",
+        "evidence_ids": [
+          "e3"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "তারকা চিহ্নিত ক্রমিক নম্বরগুলো অবশ্যই পূরণীয়।",
+        "evidence_ids": [
+          "e7"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "১৮ বছরের নিম্নের সকল আবেদনে ই-পাসপোর্টের মেয়াদ হবে ০৫ বছর এবং ৪৮ পৃষ্ঠার।",
+        "evidence_ids": [
+          "e10"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "দেশের অভ্যন্তরে আবেদনের ক্ষেত্রে প্রযোজ্য ফি এর উপর নির্ধারিত হারে ভ্যাট (VAT) সহ অন্যান্য চার্জ (যদি থাকে) অতিরিক্ত হিসাবে প্রদেয় হবে এবং বিদেশে আবেদনের ক্ষেত্রেও সরকার কর্তৃক নির্ধারিত ফি প্রদেয় হবে।",
+        "evidence_ids": [
+          "e14"
+        ],
+        "status": "source_stated"
+      }
+    ],
+    "steps": [
+      {
+        "text": "জাতীয় পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) অনুযায়ী আবেদনপত্র পূরণ করুন।",
+        "evidence_ids": [
+          "e4"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "আপনি যদি ১৮ বছরের কম বয়সী অপ্রাপ্তবয়স্ক আবেদনকারী হন এবং আপনার জাতীয় পরিচয়পত্র (NID) না থাকে, তবে আপনার পিতা অথবা মাতার জাতীয় পরিচয়পত্র (NID) নম্বর অবশ্যই উল্লেখ করুন।",
+        "evidence_ids": [
+          "e5"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "বয়স অনুযায়ী জাতীয় পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) নিম্নোক্তভাবে দাখিল করুন: (ক) বয়স ১৮ বছরের নিচে হলে অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) দাখিল করুন। (খ) বয়স ১৮-২০ বছর হলে জাতীয় পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) দাখিল করুন। (গ) বয়স ২০ বছরের ঊর্ধ্বে হলে জাতীয় পরিচয়পত্র (NID) আবশ্যিকভাবে দাখিল করুন, তবে বিদেশস্থ বাংলাদেশ মিশন হতে আবেদনের ক্ষেত্রে অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) গ্রহণযোগ্য হবে।",
+        "evidence_ids": [
+          "e6"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "দত্তক বা অভিভাবকত্ব গ্রহণের ক্ষেত্রে পাসপোর্টের আবেদনের সাথে সুরক্ষা সেবা বিভাগ, স্বরাষ্ট্র মন্ত্রণালয় হতে জারিকৃত আদেশ দাখিল করুন।",
+        "evidence_ids": [
+          "e8"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "আবেদন আপনার বর্তমান ঠিকানা সংশ্লিষ্ট বিভাগীয় পাসপোর্ট ও ভিসা অফিস, আঞ্চলিক পাসপোর্ট অফিস বা বিদেশস্থ বাংলাদেশ মিশনে দাখিল করুন।",
+        "evidence_ids": [
+          "e9"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "প্রাসঙ্গিক টেকনিক্যাল সনদসমূহ (যেমন: ডাক্তার, ইঞ্জিনিয়ার, ড্রাইভার ইত্যাদি) আপলোড বা সংযোজন করুন।",
+        "evidence_ids": [
+          "e11"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "প্রযোজ্য ক্ষেত্রে প্রাসঙ্গিক জিও (GO), এনওসি (NOC), প্রত্যয়নপত্র, অবসরোত্তর ছুটির আদেশ (PRL Order) অথবা পেনশন বই আপলোড বা সংযোজন করুন যা ইস্যুকারী কর্তৃপক্ষের নিজ নিজ ওয়েবসাইটে আপলোড থাকতে হবে।",
+        "evidence_ids": [
+          "e12"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "প্রযোজ্য ক্ষেত্রে বিবাহ সনদ বা নিকাহনামা এবং বিবাহ বিচ্ছেদের ক্ষেত্রে তালাকনামা দাখিল করুন।",
+        "evidence_ids": [
+          "e13"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "কূটনৈতিক পাসপোর্টের জন্য পররাষ্ট্র মন্ত্রণালয়ের কনস্যুলার ও ওয়েলফেয়ার উইং অথবা ইমিগ্রেশন ও পাসপোর্ট অধিদপ্তরের প্রধান কার্যালয় বরাবর আবেদনপত্র দাখিল করুন।",
+        "evidence_ids": [
+          "e15"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "বৈদেশিক মিশন হতে নতুন পাসপোর্টের জন্য আবেদন করা হলে স্থায়ী ঠিকানার কলামে বাংলাদেশের যোগাযোগের ঠিকানা উল্লেখ করুন।",
+        "evidence_ids": [
+          "e16"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "আবেদনের সময় মূল জাতীয় পরিচয়পত্র (NID), অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) এবং প্রযোজ্য ক্ষেত্রে টেকনিক্যাল সনদ, সরকারি আদেশ (GO) বা অনাপত্তি (NOC) প্রদর্শন বা দাখিল করুন।",
+        "evidence_ids": [
+          "e18"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "পাসপোর্ট রি-ইস্যুর ক্ষেত্রে মূল পাসপোর্ট প্রদর্শন করুন।",
+        "evidence_ids": [
+          "e19"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "পাসপোর্ট হারিয়ে গেলে বা চুরি হলে দ্রুত নিকটস্থ থানায় জিডি করুন এবং হারানো পাসপোর্টের ক্ষেত্রে মূল জিডির কপি প্রদর্শন বা দাখিল করুন। পুনরায় পাসপোর্টের জন্য আবেদনের সময় পুরাতন পাসপোর্টের ফটোকপি এবং জিডি কপিসহ আবেদনপত্র দাখিল করুন।",
+        "evidence_ids": [
+          "e20"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "০৬ বছর বয়সের নিচে আবেদনের ক্ষেত্রে ৩ আর (3R Size) সাইজের (ল্যাব প্রিন্ট গ্রে ব্যাকগ্রাউন্ড) ছবি দাখিল করুন।",
+        "evidence_ids": [
+          "e21"
+        ],
+        "status": "source_stated"
+      }
+    ],
+    "documents": [
+      {
+        "text": "১৮ বছরের নিচে বয়স হলে অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) দাখিল করুন।",
+        "evidence_ids": [
+          "e6"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "বয়স ১৮-২০ বছর হলে জাতীয় পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) দাখিল করুন।",
+        "evidence_ids": [
+          "e6"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "বয়স ২০ বছরের ঊর্ধ্বে হলে জাতীয় পরিচয়পত্র (NID) দাখিল করুন, তবে বিদেশস্থ বাংলাদেশ মিশন হতে আবেদনের ক্ষেত্রে অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) দাখিল করুন।",
+        "evidence_ids": [
+          "e6"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "দত্তক বা অভিভাবকত্ব গ্রহণের ক্ষেত্রে সুরক্ষা সেবা বিভাগ, স্বরাষ্ট্র মন্ত্রণালয় হতে জারিকৃত আদেশ দাখিল করুন।",
+        "evidence_ids": [
+          "e8"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "প্রযোজ্য ক্ষেত্রে বিবাহ সনদ অথবা নিকাহনামা দাখিল করুন।",
+        "evidence_ids": [
+          "e13"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "বিবাহ বিচ্ছেদের ক্ষেত্রে তালাকনামা দাখিল করুন।",
+        "evidence_ids": [
+          "e13"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "আবেদনের সময় মূল জাতীয় পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) প্রদর্শন বা দাখিল করুন।",
+        "evidence_ids": [
+          "e18"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "আবেদনের সময় প্রযোজ্য ক্ষেত্রে টেকনিক্যাল সনদ, সরকারি আদেশ (GO) অথবা অনাপত্তি (NOC) প্রদর্শন বা দাখিল করুন।",
+        "evidence_ids": [
+          "e18"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "পাসপোর্ট রি-ইস্যুর ক্ষেত্রে মূল পাসপোর্ট প্রদর্শন করুন।",
+        "evidence_ids": [
+          "e19"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "হারানো পাসপোর্টের ক্ষেত্রে মূল জিডির কপি প্রদর্শন বা দাখিল করুন এবং পুনরায় পাসপোর্টের জন্য আবেদনের সময় পুরাতন পাসপোর্টের ফটোকপি এবং জিডি কপিসহ আবেদনপত্র দাখিল করুন।",
+        "evidence_ids": [
+          "e20"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "০৬ বছর বয়সের নিচে আবেদনের ক্ষেত্রে ৩ আর (3R Size) সাইজের (ল্যাব প্রিন্ট গ্রে ব্যাকগ্রাউন্ড) ছবি দাখিল করুন।",
+        "evidence_ids": [
+          "e21"
+        ],
+        "status": "source_stated"
+      }
+    ],
+    "fees_and_deadlines": {
+      "fees": [],
+      "deadlines": [
+        {
+          "text": "দেশের অভ্যন্তরে অতি জরুরী পাসপোর্ট প্রাপ্তির লক্ষ্যে অন্যান্য সকল তথ্য সঠিক থাকা সাপেক্ষে ২ কর্মদিবসের মধ্যে পাসপোর্ট প্রদান করা হবে।",
+          "evidence_ids": [
+            "e17"
+          ],
+          "status": "source_stated"
+        },
+        {
+          "text": "দেশের অভ্যন্তরে জরুরী পাসপোর্ট প্রাপ্তির লক্ষ্যে অন্যান্য সকল তথ্য সঠিক থাকা সাপেক্ষে ৭ কর্মদিবসের মধ্যে পাসপোর্ট প্রদান করা হবে।",
+          "evidence_ids": [
+            "e17"
+          ],
+          "status": "source_stated"
+        },
+        {
+          "text": "দেশের অভ্যন্তরে রেগুলার পাসপোর্ট প্রাপ্তির লক্ষ্যে অন্যান্য সকল তথ্য সঠিক থাকা সাপেক্ষে ১৫ কর্মদিবসের মধ্যে পাসপোর্ট প্রদান করা হবে।",
+          "evidence_ids": [
+            "e17"
+          ],
+          "status": "source_stated"
+        }
+      ]
+    },
+    "unknowns": [
+      {
+        "kind": "missing",
+        "text": "ফি: এই তথ্যটি দেওয়া উৎসে নেই।",
+        "evidence_ids": []
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e1",
+        "excerpt": "১। ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।"
+      },
+      {
+        "id": "e2",
+        "excerpt": "২। ই-পাসপোর্ট আবেদনের ক্ষেত্রে কোন কাগজপত্র সত্যায়ন করার প্রয়োজন হবে না।"
+      },
+      {
+        "id": "e3",
+        "excerpt": "৩। ই-পাসপোর্ট ফরমে কোন ছবি সংযোজন এবং তা সত্যায়নের প্রয়োজন হবে না।"
+      },
+      {
+        "id": "e4",
+        "excerpt": "৪। জাতীয় ‍পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) অনুযায়ী আবেদন পত্র পূরণ করতে হবে।"
+      },
+      {
+        "id": "e5",
+        "excerpt": "৫। অপ্রাপ্ত বয়স্ক (১৮ বছরের কম) আবেদনকারী যার জাতীয় পরিচয়পত্র (NID) নাই, তার পিতা অথবা মাতার জাতীয় পরিচয়পত্র (NID) নম্বর অবশ্যই উল্লেখ করতে হবে।"
+      },
+      {
+        "id": "e6",
+        "excerpt": "৬। জাতীয় ‍পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) নিম্নোক্ত বয়স অনুসারে দাখিল করতে হবে-\n\n(ক) ১৮ বছরের নিম্নে হলে অনলাইন জন্মনিবন্ধন সনদ (BRC English Version)।\n\n(খ) ১৮-২০ বছর হলে জাতীয় ‍পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version)।\n\n(গ) ২০ বছরের উর্ধে হলে জাতীয় ‍পরিচয়পত্র (NID) আবশ্যক । তবে বিদেশস্থ বাংলাদেশ মিশন হতে আবেদনের ক্ষেত্রে অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) গ্রহণযোগ্য হবে।"
+      },
+      {
+        "id": "e7",
+        "excerpt": "৭। তারকা চিহ্নিত ক্রমিক নম্বরগুলো অবশ্যই পূরণীয়।"
+      },
+      {
+        "id": "e8",
+        "excerpt": "৮। দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে পাসপোর্টের আবেদনের সাথে সুরক্ষা সেবা বিভাগ, স্বরাষ্ট্র মন্ত্রণালয় হতে জারিকৃত আদেশ দাখিল করতে হবে।"
+      },
+      {
+        "id": "e9",
+        "excerpt": "৯। আবেদন বর্তমান ঠিকানা সংশ্লিষ্ঠ বিভাগীয় পাসপোর্ট ও ভিসা অফিস/আঞ্চলিক পাসপোর্ট অফিস/বিদেশস্থ বাংলাদেশ মিশনে দাখিল করতে হবে।"
+      },
+      {
+        "id": "e10",
+        "excerpt": "১০। ১৮ বছরের নিম্নের সকল আবেদনে ই-পাসপোর্টের মেয়াদ হবে ০৫ বছর এবং ৪৮ পৃষ্ঠার।"
+      },
+      {
+        "id": "e11",
+        "excerpt": "১১। প্রাসঙ্গিক টেকনিক্যাল সনদসমূহ (যেমন: ডাক্তার, ইঞ্জিনিয়ার, ড্রাইভার ইত্যাদি) আপলোড/সংযোজন করতে হবে।"
+      },
+      {
+        "id": "e12",
+        "excerpt": "১২। প্রযোজ্য ক্ষেত্রে প্রাসঙ্গিক জিও (GO)/এনওসি (NOC)/ প্রত্যয়নপত্র/ অবসরোত্তর ছুটির আদেশ (PRL Order)/ পেনশন বই আপলোড/সংযোজন করতে হবে যা ইস্যুকারী কর্তৃপক্ষের নিজ নিজ Website এ আপলোড থাকতে হবে।"
+      },
+      {
+        "id": "e13",
+        "excerpt": "১৩। প্রযোজ্য ক্ষেত্রে বিবাহ সনদ/নিকাহনামা এবং বিবাহ বিচ্ছেদের ক্ষেত্রে তালাকনামা দাখিল করতে হবে।"
+      },
+      {
+        "id": "e14",
+        "excerpt": "১৪। দেশের অভ্যন্তরে আবেদনের ক্ষেত্রে প্রযোজ্য ফি এর উপর নির্ধারিত হারে ভ্যাট (VAT) সহ অন্যান্য চার্জ (যদি থাকে) অতিরিক্ত হিসাবে প্রদেয় হবে। বিদেশে আবেদনের ক্ষেত্রেও সরকার কর্তৃক নির্ধারিত ফি প্রদেয় হবে।"
+      },
+      {
+        "id": "e15",
+        "excerpt": "১৫। কূটনৈতিক পাসপোর্টের জন্য পররাষ্ট্র মন্ত্রণালয়ের কনস্যুলার ও ওয়েলফেয়ার উইং (Consular and Welfare Wing) অথবা ইমিগ্রেশন ও পাসপোর্ট অধিদপ্তরের প্রধান কার্যালয় বরাবর আবেদনপত্র দাখিল করতে হবে।"
+      },
+      {
+        "id": "e16",
+        "excerpt": "১৬। বৈদেশিক মিশন হতে নতুন পাসপোর্টের জন্য আবেদন করা হলে স্থায়ী ঠিকানার কলামে বাংলাদেশের যোগাযোগের ঠিকানা উল্লেখ করতে হবে।"
+      },
+      {
+        "id": "e17",
+        "excerpt": "১৭। (ক) দেশের অভ্যন্তরে অতি জরুরী পাসপোর্ট প্রাপ্তির লক্ষ্যে অন্যান্য সকল তথ্য সঠিক থাকা সাপেক্ষে ২ কর্মদিবসের মধ্যে পাসপোর্ট প্রদান করা হবে।\n\n(খ) দেশের অভ্যন্তরে জরুরী পাসপোর্ট প্রাপ্তির লক্ষ্যে অন্যান্য সকল তথ্য সঠিক থাকা সাপেক্ষে ৭ কর্মদিবসের মধ্যে পাসপোর্ট প্রদান করা হবে।\n\n(গ) দেশের অভ্যন্তরে রেগুলার পাসপোর্ট প্রাপ্তির লক্ষ্যে অন্যান্য সকল তথ্য সঠিক থাকা সাপেক্ষে ১৫ কর্মদিবসের মধ্যে পাসপোর্ট প্রদান করা হবে।"
+      },
+      {
+        "id": "e18",
+        "excerpt": "১৮।আবেদনের সময় মূল জাতীয় ‍পরিচয়পত্র (NID), অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) এবং প্রযোজ্য ক্ষেত্রে টেকনিক্যাল সনদ, সরকারি আদেশ (GO)/অনাপত্তি (NOC) প্রদর্শন/দাখিল করতে হবে।"
+      },
+      {
+        "id": "e19",
+        "excerpt": "১৯। পাসপোর্ট রি-ইস্যুর ক্ষেত্রে মূল পাসপোর্ট প্রদর্শন করতে হবে।"
+      },
+      {
+        "id": "e20",
+        "excerpt": "২০। হারানো পাসপোর্টের ক্ষেত্রে মূল জিডির কপি প্রদর্শন/দাখিল করতে হবে। পাসপোর্ট হারিয়ে গেলে অথবা চুরি হলে দ্রুত নিকটস্থ থানায় জিডি করতে হবে। পুনরায় পাসপোর্টের জন্য আবেদনের সময় পুরাতন পাসপোর্টের ফটোকপি এবং জিডি কপিসহ আবেদনপত্র দাখিল করতে হবে।"
+      },
+      {
+        "id": "e21",
+        "excerpt": "২১।০৬ বছর বয়সের নিম্নের আবেদনের ক্ষেত্রে ৩ আর (3R Size) সাইজের ( ল্যাব প্রিন্ট গ্রে ব্যাকগ্রাউন্ড ) ছবি দাখিল করতে হবে।"
+      }
+    ]
+  },
+  "semantic_review": {
+    "decisions": [
+      {
+        "claim_id": "explanation:0",
+        "verdict": "supported",
+        "section": "explanation",
+        "evidence_ids": [
+          "e1"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 1."
+      },
+      {
+        "claim_id": "explanation:1",
+        "verdict": "supported",
+        "section": "explanation",
+        "evidence_ids": [
+          "e2"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 2."
+      },
+      {
+        "claim_id": "explanation:2",
+        "verdict": "supported",
+        "section": "explanation",
+        "evidence_ids": [
+          "e3"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 3."
+      },
+      {
+        "claim_id": "explanation:3",
+        "verdict": "supported",
+        "section": "explanation",
+        "evidence_ids": [
+          "e4"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 7."
+      },
+      {
+        "claim_id": "explanation:4",
+        "verdict": "supported",
+        "section": "explanation",
+        "evidence_ids": [
+          "e5"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 10."
+      },
+      {
+        "claim_id": "explanation:5",
+        "verdict": "supported",
+        "section": "explanation",
+        "evidence_ids": [
+          "e6"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 14."
+      },
+      {
+        "claim_id": "steps:0",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e7"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 4."
+      },
+      {
+        "claim_id": "steps:1",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e8"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 5."
+      },
+      {
+        "claim_id": "steps:2",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e9"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 6."
+      },
+      {
+        "claim_id": "steps:3",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e10"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 8."
+      },
+      {
+        "claim_id": "steps:4",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e11"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 9."
+      },
+      {
+        "claim_id": "steps:5",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e12"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 11."
+      },
+      {
+        "claim_id": "steps:6",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e13"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 12."
+      },
+      {
+        "claim_id": "steps:7",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e14"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 13."
+      },
+      {
+        "claim_id": "steps:8",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e15"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 15."
+      },
+      {
+        "claim_id": "steps:9",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e16"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 16."
+      },
+      {
+        "claim_id": "steps:10",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e17"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 18."
+      },
+      {
+        "claim_id": "steps:11",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e18"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 19."
+      },
+      {
+        "claim_id": "steps:12",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e19"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 20."
+      },
+      {
+        "claim_id": "steps:13",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e20"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 21."
+      },
+      {
+        "claim_id": "documents:0",
+        "verdict": "supported",
+        "section": "documents",
+        "evidence_ids": [
+          "e21"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 6(ক)."
+      },
+      {
+        "claim_id": "documents:1",
+        "verdict": "supported",
+        "section": "documents",
+        "evidence_ids": [
+          "e22"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 6(খ)."
+      },
+      {
+        "claim_id": "documents:2",
+        "verdict": "supported",
+        "section": "documents",
+        "evidence_ids": [
+          "e23"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 6(গ)."
+      },
+      {
+        "claim_id": "documents:3",
+        "verdict": "supported",
+        "section": "documents",
+        "evidence_ids": [
+          "e24"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 8."
+      },
+      {
+        "claim_id": "documents:4",
+        "verdict": "supported",
+        "section": "documents",
+        "evidence_ids": [
+          "e25"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 13."
+      },
+      {
+        "claim_id": "documents:5",
+        "verdict": "supported",
+        "section": "documents",
+        "evidence_ids": [
+          "e26"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 13."
+      },
+      {
+        "claim_id": "documents:6",
+        "verdict": "supported",
+        "section": "documents",
+        "evidence_ids": [
+          "e27"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 18."
+      },
+      {
+        "claim_id": "documents:7",
+        "verdict": "supported",
+        "section": "documents",
+        "evidence_ids": [
+          "e28"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 18."
+      },
+      {
+        "claim_id": "documents:8",
+        "verdict": "supported",
+        "section": "documents",
+        "evidence_ids": [
+          "e29"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 19."
+      },
+      {
+        "claim_id": "documents:9",
+        "verdict": "supported",
+        "section": "documents",
+        "evidence_ids": [
+          "e30"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 20."
+      },
+      {
+        "claim_id": "documents:10",
+        "verdict": "supported",
+        "section": "documents",
+        "evidence_ids": [
+          "e31"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 21."
+      },
+      {
+        "claim_id": "deadlines:0",
+        "verdict": "supported",
+        "section": "deadlines",
+        "evidence_ids": [
+          "e32"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 17(ক)."
+      },
+      {
+        "claim_id": "deadlines:1",
+        "verdict": "supported",
+        "section": "deadlines",
+        "evidence_ids": [
+          "e33"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 17(খ)."
+      },
+      {
+        "claim_id": "deadlines:2",
+        "verdict": "supported",
+        "section": "deadlines",
+        "evidence_ids": [
+          "e34"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "Directly supported by source item 17(গ)."
+      },
+      {
+        "claim_id": "unknowns:0",
+        "verdict": "supported",
+        "section": "unknowns",
+        "evidence_ids": [],
+        "missing_condition_ids": [],
+        "rationale": "The source mentions applicable fees and VAT exist (Item 14), but does not state the exact fee amount."
+      },
+      {
+        "claim_id": "unknowns:1",
+        "verdict": "unsupported",
+        "section": "unknowns",
+        "evidence_ids": [],
+        "missing_condition_ids": [],
+        "rationale": "This claim is marked as an unverified/unsupported AI claim while the actual policy is present in source item 20."
+      },
+      {
+        "claim_id": "unknowns:2",
+        "verdict": "unsupported",
+        "section": "unknowns",
+        "evidence_ids": [],
+        "missing_condition_ids": [],
+        "rationale": "This claim is marked as an unverified AI claim while the actual policy is present in source item 21."
+      },
+      {
+        "claim_id": "unknowns:3",
+        "verdict": "unsupported",
+        "section": "unknowns",
+        "evidence_ids": [],
+        "missing_condition_ids": [],
+        "rationale": "Duplicate of unknowns:1 incorrectly categorized."
+      },
+      {
+        "claim_id": "unknowns:4",
+        "verdict": "unsupported",
+        "section": "unknowns",
+        "evidence_ids": [],
+        "missing_condition_ids": [],
+        "rationale": "Incorrect missing information notice since the text is supported by item 20."
+      },
+      {
+        "claim_id": "unknowns:5",
+        "verdict": "unsupported",
+        "section": "unknowns",
+        "evidence_ids": [],
+        "missing_condition_ids": [],
+        "rationale": "Incorrect missing information notice since the text is supported by item 21."
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e1",
+        "excerpt": "১। ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।"
+      },
+      {
+        "id": "e2",
+        "excerpt": "২। ই-পাসপোর্ট আবেদনের ক্ষেত্রে কোন কাগজপত্র সত্যায়ন করার প্রয়োজন হবে না।"
+      },
+      {
+        "id": "e3",
+        "excerpt": "৩। ই-পাসপোর্ট ফরমে কোন ছবি সংযোজন এবং তা সত্যায়নের প্রয়োজন হবে না।"
+      },
+      {
+        "id": "e4",
+        "excerpt": "৭। তারকা চিহ্নিত ক্রমিক নম্বরগুলো অবশ্যই পূরণীয়।"
+      },
+      {
+        "id": "e5",
+        "excerpt": "১০। ১৮ বছরের নিম্নের সকল আবেদনে ই-পাসপোর্টের মেয়াদ হবে ০৫ বছর এবং ৪৮ পৃষ্ঠার।"
+      },
+      {
+        "id": "e6",
+        "excerpt": "১৪। দেশের অভ্যন্তরে আবেদনের ক্ষেত্রে প্রযোজ্য ফি এর উপর নির্ধারিত হারে ভ্যাট (VAT) সহ অন্যান্য চার্জ (যদি থাকে) অতিরিক্ত হিসাবে প্রদেয় হবে। বিদেশে আবেদনের ক্ষেত্রেও সরকার কর্তৃক নির্ধারিত ফি প্রদেয় হবে।"
+      },
+      {
+        "id": "e7",
+        "excerpt": "৪। জাতীয় ‍পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) অনুযায়ী আবেদন পত্র পূরণ করতে হবে।"
+      },
+      {
+        "id": "e8",
+        "excerpt": "৫। অপ্রাপ্ত বয়স্ক (১৮ বছরের কম) আবেদনকারী যার জাতীয় পরিচয়পত্র (NID) নাই, তার পিতা অথবা মাতার জাতীয় পরিচয়পত্র (NID) নম্বর অবশ্যই উল্লেখ করতে হবে।"
+      },
+      {
+        "id": "e9",
+        "excerpt": "৬। জাতীয় ‍পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) নিম্নোক্ত বয়স অনুসারে দাখিল করতে হবে-\n(ক) ১৮ বছরের নিম্নে হলে অনলাইন জন্মনিবন্ধন সনদ (BRC English Version)।\n(খ) ১৮-২০ বছর হলে জাতীয় ‍পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version)।\n(গ) ২০ বছরের উর্ধে হলে জাতীয় ‍পরিচয়পত্র (NID) আবশ্যক । তবে বিদেশস্থ বাংলাদেশ মিশন হতে আবেদনের ক্ষেত্রে অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) গ্রহণযোগ্য হবে।"
+      },
+      {
+        "id": "e10",
+        "excerpt": "৮। দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে পাসপোর্টের আবেদনের সাথে সুরক্ষা সেবা বিভাগ, স্বরাষ্ট্র মন্ত্রণালয় হতে জারিকৃত আদেশ দাখিল করতে হবে।"
+      },
+      {
+        "id": "e11",
+        "excerpt": "৯। আবেদন বর্তমান ঠিকানা সংশ্লিষ্ঠ বিভাগীয় পাসপোর্ট ও ভিসা অফিস/আঞ্চলিক পাসপোর্ট অফিস/বিদেশস্থ বাংলাদেশ মিশনে দাখিল করতে হবে।"
+      },
+      {
+        "id": "e12",
+        "excerpt": "১১। প্রাসঙ্গিক টেকনিক্যাল সনদসমূহ (যেমন: ডাক্তার, ইঞ্জিনিয়ার, ড্রাইভার ইত্যাদি) আপলোড/সংযোজন করতে হবে।"
+      },
+      {
+        "id": "e13",
+        "excerpt": "১২। প্রযোজ্য ক্ষেত্রে প্রাসঙ্গিক জিও (GO)/এনওসি (NOC)/ প্রত্যয়নপত্র/ অবসরোত্তর ছুটির আদেশ (PRL Order)/ পেনশন বই আপলোড/সংযোজন করতে হবে যা ইস্যুকারী কর্তৃপক্ষের নিজ নিজ Website এ আপলোড থাকতে হবে।"
+      },
+      {
+        "id": "e14",
+        "excerpt": "১৩। প্রযোজ্য ক্ষেত্রে বিবাহ সনদ/নিকাহনামা এবং বিবাহ বিচ্ছেদের ক্ষেত্রে তালাকনামা দাখিল করতে হবে।"
+      },
+      {
+        "id": "e15",
+        "excerpt": "১৫। কূটনৈতিক পাসপোর্টের জন্য পররাষ্ট্র মন্ত্রণালয়ের কনস্যুলার ও ওয়েলফেয়ার উইং (Consular and Welfare Wing) অথবা ইমিগ্রেশন ও পাসপোর্ট অধিদপ্তরের প্রধান কার্যালয় বরাবর আবেদনপত্র দাখিল করতে হবে।"
+      },
+      {
+        "id": "e16",
+        "excerpt": "১৬। বৈদেশিক মিশন হতে নতুন পাসপোর্টের জন্য আবেদন করা হলে স্থায়ী ঠিকানার কলামে বাংলাদেশের যোগাযোগের ঠিকানা উল্লেখ করতে হবে।"
+      },
+      {
+        "id": "e17",
+        "excerpt": "১৮।আবেদনের সময় মূল জাতীয় ‍পরিচয়পত্র (NID), অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) এবং প্রযোজ্য ক্ষেত্রে টেকনিক্যাল সনদ, সরকারি আদেশ (GO)/অনাপত্তি (NOC) প্রদর্শন/দাখিল করতে হবে।"
+      },
+      {
+        "id": "e18",
+        "excerpt": "১৯। পাসপোর্ট রি-ইস্যুর ক্ষেত্রে মূল পাসপোর্ট প্রদর্শন করতে হবে।"
+      },
+      {
+        "id": "e19",
+        "excerpt": "২০। হারানো পাসপোর্টের ক্ষেত্রে মূল জিডির কপি প্রদর্শন/দাখিল করতে হবে। পাসপোর্ট হারিয়ে গেলে অথবা চুরি হলে দ্রুত নিকটস্থ থানায় জিডি করতে হবে। পুনরায় পাসপোর্টের জন্য আবেদনের সময় পুরাতন পাসপোর্টের ফটোকপি এবং জিডি কপিসহ আবেদনপত্র দাখিল করতে হবে ।"
+      },
+      {
+        "id": "e20",
+        "excerpt": "২১।০৬ বছর বয়সের নিম্নের আবেদনের ক্ষেত্রে ৩ আর (3R Size) সাইজের ( ল্যাব প্রিন্ট গ্রে ব্যাকগ্রাউন্ড ) ছবি দাখিল করতে হবে।"
+      },
+      {
+        "id": "e21",
+        "excerpt": "(ক) ১৮ বছরের নিম্নে হলে অনলাইন জন্মনিবন্ধন সনদ (BRC English Version)।"
+      },
+      {
+        "id": "e22",
+        "excerpt": "(খ) ১৮-২০ বছর হলে জাতীয় ‍পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version)।"
+      },
+      {
+        "id": "e23",
+        "excerpt": "(গ) ২০ বছরের উর্ধে হলে জাতীয় ‍পরিচয়পত্র (NID) আবশ্যক । তবে বিদেশস্থ বাংলাদেশ মিশন হতে আবেদনের ক্ষেত্রে অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) গ্রহণযোগ্য হবে।"
+      },
+      {
+        "id": "e24",
+        "excerpt": "৮। দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে পাসপোর্টের আবেদনের সাথে সুরক্ষা সেবা বিভাগ, স্বরাষ্ট্র মন্ত্রণালয় হতে জারিকৃত আদেশ দাখিল করতে হবে।"
+      },
+      {
+        "id": "e25",
+        "excerpt": "১৩। প্রযোজ্য ক্ষেত্রে বিবাহ সনদ/নিকাহনামা এবং বিবাহ বিচ্ছেদের ক্ষেত্রে তালাকনামা দাখিল করতে হবে।"
+      },
+      {
+        "id": "e26",
+        "excerpt": "১৩। প্রযোজ্য ক্ষেত্রে বিবাহ সনদ/নিকাহনামা এবং বিবাহ বিচ্ছেদের ক্ষেত্রে তালাকনামা দাখিল করতে হবে।"
+      },
+      {
+        "id": "e27",
+        "excerpt": "১৮।আবেদনের সময় মূল জাতীয় ‍পরিচয়পত্র (NID), অনলাইন জন্মনিবন্ধন সনদ (BRC English Version)"
+      },
+      {
+        "id": "e28",
+        "excerpt": "প্রযোজ্য ক্ষেত্রে টেকনিক্যাল সনদ, সরকারি আদেশ (GO)/অনাপত্তি (NOC) প্রদর্শন/দাখিল করতে হবে।"
+      },
+      {
+        "id": "e29",
+        "excerpt": "১৯। পাসপোর্ট রি-ইস্যুর ক্ষেত্রে মূল পাসপোর্ট প্রদর্শন করতে হবে।"
+      },
+      {
+        "id": "e30",
+        "excerpt": "২০। হারানো পাসপোর্টের ক্ষেত্রে মূল জিডির কপি প্রদর্শন/দাখিল করতে হবে। পাসপোর্ট হারিয়ে গেলে অথবা চুরি হলে দ্রুত নিকটস্থ থানায় জিডি করতে হবে। পুনরায় পাসপোর্টের জন্য আবেদনের সময় পুরাতন পাসপোর্টের ফটোকপি এবং জিডি কপিসহ আবেদনপত্র দাখিল করতে হবে ।"
+      },
+      {
+        "id": "e31",
+        "excerpt": "২১।০৬ বছর বয়সের নিম্নের আবেদনের ক্ষেত্রে ৩ আর (3R Size) সাইজের ( ল্যাব প্রিন্ট গ্রে ব্যাকগ্রাউন্ড ) ছবি দাখিল করতে হবে।"
+      },
+      {
+        "id": "e32",
+        "excerpt": "১৭। (ক) দেশের অভ্যন্তরে অতি জরুরী পাসপোর্ট প্রাপ্তির লক্ষ্যে অন্যান্য সকল তথ্য সঠিক থাকা সাপেক্ষে ২ কর্মদিবসের মধ্যে পাসপোর্ট প্রদান করা হবে।"
+      },
+      {
+        "id": "e33",
+        "excerpt": "(খ) দেশের অভ্যন্তরে জরুরী পাসপোর্ট প্রাপ্তির লক্ষ্যে অন্যান্য সকল তথ্য সঠিক থাকা সাপেক্ষে ৭ কর্মদিবসের মধ্যে পাসপোর্ট প্রদান করা হবে।"
+      },
+      {
+        "id": "e34",
+        "excerpt": "(গ) দেশের অভ্যন্তরে রেগুলার পাসপোর্ট প্রাপ্তির লক্ষ্যে অন্যান্য সকল তথ্য সঠিক থাকা সাপেক্ষে ১৫ কর্মদিবসের মধ্যে পাসপোর্ট প্রদান করা হবে।"
+      }
+    ]
+  }
+}

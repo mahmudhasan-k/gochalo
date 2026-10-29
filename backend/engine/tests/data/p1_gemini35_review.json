@@ -1,0 +1,287 @@
+{
+  "purpose": "One fresh Gemini 3.5 generation/review on unchanged fictional P1 source; partial independent-form coverage, not broad semantic acceptance.",
+  "recorded_model": "gemini-3.5-flash-lite",
+  "source": "পরীক্ষার জন্য কাল্পনিক নোটিশ — নমুনা প্রশিক্ষণ নিবন্ধন।\nশুধু এই জেলার বাসিন্দা এবং বর্তমানে শিক্ষার্থী—দুই শর্তই পূরণ হলে আবেদন করা যাবে।\nআবেদনপত্রে নিজের সচল মোবাইল নম্বর লিখুন; জাতীয় পরিচয়পত্রের কপি জমা দিতে হবে না।\nআগে সনদ জমা না দিয়ে থাকলে শিক্ষার্থী সনদ অথবা প্রতিষ্ঠানের প্রত্যয়নপত্র দিন; দুটোই লাগবে না।\nফি ২০০ টাকা; প্রতিবন্ধী আবেদনকারীদের ফি দিতে হবে না।\nফি না লাগলেও আবেদনপত্র জমা দিতে হবে।\nআবেদনের শেষ তারিখ এই নোটিশে দেওয়া নেই।",
+  "provider_output": {
+    "explanation": [
+      {
+        "text": "এই জেলার বাসিন্দা এবং বর্তমানে শিক্ষার্থী—এই দুটি শর্ত পূরণ হলেই কেবল আবেদন করা যাবে।",
+        "evidence_ids": [
+          "e2"
+        ],
+        "status": "source_stated"
+      }
+    ],
+    "steps": [
+      {
+        "text": "এই জেলার বাসিন্দা এবং বর্তমানে শিক্ষার্থী হলে, আবেদনপত্রে নিজের সচল মোবাইল নম্বর লিখুন।",
+        "evidence_ids": [
+          "e2",
+          "e3"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "এই জেলার বাসিন্দা এবং বর্তমানে শিক্ষার্থী হলে, আগে সনদ জমা না দিয়ে থাকলে শিক্ষার্থী সনদ অথবা প্রতিষ্ঠানের প্রত্যয়নপত্র দিন।",
+        "evidence_ids": [
+          "e2",
+          "e4"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "এই জেলার বাসিন্দা এবং বর্তমানে শিক্ষার্থী হলে এবং প্রতিবন্ধী আবেদনকারী না হলে, ২০০ টাকা ফি দিন।",
+        "evidence_ids": [
+          "e2",
+          "e5"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "এই জেলার বাসিন্দা এবং বর্তমানে শিক্ষার্থী হলে এবং প্রতিবন্ধী আবেদনকারী হলে, ফি না লাগলেও আবেদনপত্র জমা দিন।",
+        "evidence_ids": [
+          "e2",
+          "e5",
+          "e6"
+        ],
+        "status": "source_stated"
+      }
+    ],
+    "documents": [
+      {
+        "text": "এই জেলার বাসিন্দা এবং বর্তমানে শিক্ষার্থী হলে এবং আগে সনদ জমা না দিয়ে থাকলে, শিক্ষার্থী সনদ অথবা প্রতিষ্ঠানের প্রত্যয়নপত্র দিন।",
+        "evidence_ids": [
+          "e2",
+          "e4"
+        ],
+        "status": "source_stated"
+      }
+    ],
+    "fees_and_deadlines": {
+      "fees": [
+        {
+          "text": "এই জেলার বাসিন্দা এবং বর্তমানে শিক্ষার্থী হলে, ফি ২০০ টাকা; তবে প্রতিবন্ধী আবেদনকারীদের ফি দিতে হবে না।",
+          "evidence_ids": [
+            "e2",
+            "e5"
+          ],
+          "status": "source_stated"
+        }
+      ],
+      "deadlines": []
+    },
+    "unknowns": [
+      {
+        "kind": "missing",
+        "text": "সময়সীমা: এই তথ্যটি দেওয়া উৎসে নেই।",
+        "evidence_ids": []
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e1",
+        "excerpt": "পরীক্ষার জন্য কাল্পনিক নোটিশ — নমুনা প্রশিক্ষণ নিবন্ধন।"
+      },
+      {
+        "id": "e2",
+        "excerpt": "শুধু এই জেলার বাসিন্দা এবং বর্তমানে শিক্ষার্থী—দুই শর্তই পূরণ হলে আবেদন করা যাবে।"
+      },
+      {
+        "id": "e3",
+        "excerpt": "আবেদনপত্রে নিজের সচল মোবাইল নম্বর লিখুন; জাতীয় পরিচয়পত্রের কপি জমা দিতে হবে না।"
+      },
+      {
+        "id": "e4",
+        "excerpt": "আগে সনদ জমা না দিয়ে থাকলে শিক্ষার্থী সনদ অথবা প্রতিষ্ঠানের প্রত্যয়নপত্র দিন; দুটোই লাগবে না।"
+      },
+      {
+        "id": "e5",
+        "excerpt": "ফি ২০০ টাকা; প্রতিবন্ধী আবেদনকারীদের ফি দিতে হবে না।"
+      },
+      {
+        "id": "e6",
+        "excerpt": "ফি না লাগলেও আবেদনপত্র জমা দিতে হবে।"
+      },
+      {
+        "id": "e7",
+        "excerpt": "আবেদনের শেষ তারিখ এই নোটিশে দেওয়া নেই।"
+      }
+    ]
+  },
+  "semantic_review": {
+    "decisions": [
+      {
+        "claim_id": "explanation:0",
+        "verdict": "supported",
+        "section": "explanation",
+        "evidence_ids": [
+          "e1"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "The source explicitly states that both conditions (district resident and currently a student) must be met to apply."
+      },
+      {
+        "claim_id": "steps:0",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e1",
+          "e2"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "The source states to write a working mobile number in the application form when applying under those conditions."
+      },
+      {
+        "claim_id": "steps:1",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e1",
+          "e3"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "The source mentions providing either a student certificate or institutional attestation if not submitted before."
+      },
+      {
+        "claim_id": "steps:2",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e1",
+          "e4"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "The source states the fee is 200 taka and disabled applicants do not need to pay."
+      },
+      {
+        "claim_id": "steps:3",
+        "verdict": "supported",
+        "section": "steps",
+        "evidence_ids": [
+          "e1",
+          "e4",
+          "e5"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "The source states that even if no fee is required, the application form must be submitted."
+      },
+      {
+        "claim_id": "documents:0",
+        "verdict": "supported",
+        "section": "documents",
+        "evidence_ids": [
+          "e1",
+          "e3"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "The source indicates providing student certificate or institutional attestation if not previously submitted."
+      },
+      {
+        "claim_id": "fees:0",
+        "verdict": "supported",
+        "section": "fees",
+        "evidence_ids": [
+          "e4"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "The source specifies a fee of 200 taka with an exemption for disabled applicants."
+      },
+      {
+        "claim_id": "unknowns:0",
+        "verdict": "supported",
+        "section": "unknowns",
+        "evidence_ids": [
+          "e6"
+        ],
+        "missing_condition_ids": [],
+        "rationale": "The source explicitly states that the deadline is not given in the notice."
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e1",
+        "excerpt": "শুধু এই জেলার বাসিন্দা এবং বর্তমানে শিক্ষার্থী—দুই শর্তই পূরণ হলে আবেদন করা যাবে।"
+      },
+      {
+        "id": "e2",
+        "excerpt": "আবেদনপত্রে নিজের সচল মোবাইল নম্বর লিখুন"
+      },
+      {
+        "id": "e3",
+        "excerpt": "আগে সনদ জমা না দিয়ে থাকলে শিক্ষার্থী সনদ অথবা প্রতিষ্ঠানের প্রত্যয়নপত্র দিন;"
+      },
+      {
+        "id": "e4",
+        "excerpt": "ফি ২০০ টাকা; প্রতিবন্ধী আবেদনকারীদের ফি দিতে হবে না।"
+      },
+      {
+        "id": "e5",
+        "excerpt": "ফি না লাগলেও আবেদনপত্র জমা দিতে হবে।"
+      },
+      {
+        "id": "e6",
+        "excerpt": "আবেদনের শেষ তারিখ এই নোটিশে দেওয়া নেই।"
+      }
+    ]
+  },
+  "evaluation": {
+    "outcome": "partial; not full P1 acceptance",
+    "criteria": [
+      {
+        "criterion": "Eligibility is BOTH local resident AND current student, never OR or either condition alone.",
+        "outcome": "pass",
+        "evidence": "All seven factual items preserve resident AND current student; no OR broadening."
+      },
+      {
+        "criterion": "Any standalone application instruction retains the stated eligibility scope.",
+        "outcome": "pass",
+        "evidence": "Every generated action/document/fee repeats both global conditions and cites the scope excerpt."
+      },
+      {
+        "criterion": "Working mobile number is information to enter, not a required document.",
+        "outcome": "pass",
+        "evidence": "Mobile number stays an information-entry step, not a document."
+      },
+      {
+        "criterion": "Do not require an NID copy; retain the explicit negative requirement accurately if mentioned.",
+        "outcome": "pass",
+        "evidence": "No NID-copy requirement invented; the original negative source quotation is intact."
+      },
+      {
+        "criterion": "Student certificate OR institution attestation, only if not already submitted; never both or unconditional resubmission.",
+        "outcome": "pass",
+        "evidence": "One alternative certificate item preserves OR and the prior-submission exception in both arrays."
+      },
+      {
+        "criterion": "Fee exactly ২০০ টাকা WITH exemption for applicants with disabilities; any standalone payment instruction preserves the exemption.",
+        "outcome": "pass_with_conservative_withholding",
+        "evidence": "The fee item includes 200 taka and disability exemption. A valid non-disabled payment step is conservatively withheld for not repeating the literal exemption sentence."
+      },
+      {
+        "criterion": "Fee exemption does not waive application-form submission.",
+        "outcome": "partial",
+        "evidence": "Exempt applicants still submit the form; no waiver is invented. However the form step is narrowed to disabled applicants and does not independently state submission for all eligible applicants."
+      },
+      {
+        "criterion": "Deadline unavailable, never unlimited or invented; no false missing-fee/documents notice.",
+        "outcome": "pass",
+        "evidence": "Deadline remains missing, not unlimited; no false missing-fee or missing-document notice."
+      },
+      {
+        "criterion": "Strict six-field schema, exact quotations AND full semantic support; natural Bangla with intact negation, scope and exceptions.",
+        "outcome": "partial",
+        "evidence": "Strict schema and every generation/review quote accepted; natural Bangla. Full coverage of the independent form rule remains incomplete, so no full P1 acceptance."
+      }
+    ],
+    "visible_claim_safety": "No false visible requirement identified in this single fixture; completeness and general accuracy are not established.",
+    "root_cause_evidence": "Generation teaching example describes e5 as their form and demonstrates only a disabled-applicant form reminder. The output follows that pattern; causation not independently isolated.",
+    "prompt_followup": "Corrected to teach a general form step for all eligible applicants. No post-change live validation authorized."
+  },
+  "validation_context": {
+    "pipeline_commit": "e523d75bca3ead17f2962856548b65dd17e893ee",
+    "prompt_file_at_call_sha256": "0fafe2125235847c739d5519d71753ab7fc6050ceb98fea030a9bf0590805767",
+    "provider_api_version": "v1beta",
+    "requests": 2,
+    "post_call_prompt_changed": true
+  }
+}

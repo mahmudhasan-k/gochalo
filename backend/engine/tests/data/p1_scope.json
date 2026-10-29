@@ -1,0 +1,145 @@
+{
+  "purpose": "Existing synthetic P1 acceptance case and historical failed output. Not Gemini 3.5 acceptance.",
+  "recorded_model": "gemini-3.1-flash-lite",
+  "source": "পরীক্ষার জন্য কাল্পনিক নোটিশ — নমুনা প্রশিক্ষণ নিবন্ধন।\nশুধু এই জেলার বাসিন্দা এবং বর্তমানে শিক্ষার্থী—দুই শর্তই পূরণ হলে আবেদন করা যাবে।\nআবেদনপত্রে নিজের সচল মোবাইল নম্বর লিখুন; জাতীয় পরিচয়পত্রের কপি জমা দিতে হবে না।\nআগে সনদ জমা না দিয়ে থাকলে শিক্ষার্থী সনদ অথবা প্রতিষ্ঠানের প্রত্যয়নপত্র দিন; দুটোই লাগবে না।\nফি ২০০ টাকা; প্রতিবন্ধী আবেদনকারীদের ফি দিতে হবে না।\nফি না লাগলেও আবেদনপত্র জমা দিতে হবে।\nআবেদনের শেষ তারিখ এই নোটিশে দেওয়া নেই।",
+  "expected": [
+    "Eligibility is BOTH local resident AND current student, never OR or either condition alone.",
+    "Any standalone application instruction retains the stated eligibility scope.",
+    "Working mobile number is information to enter, not a required document.",
+    "Do not require an NID copy; retain the explicit negative requirement accurately if mentioned.",
+    "Student certificate OR institution attestation, only if not already submitted; never both or unconditional resubmission.",
+    "Fee exactly ২০০ টাকা WITH exemption for applicants with disabilities; any standalone payment instruction preserves the exemption.",
+    "Fee exemption does not waive application-form submission.",
+    "Deadline unavailable, never unlimited or invented; no false missing-fee/documents notice.",
+    "Strict six-field schema, exact quotations AND full semantic support; natural Bangla with intact negation, scope and exceptions."
+  ],
+  "prohibited": [
+    "Eligibility broadened",
+    "Mandatory NID copy",
+    "Both certificates required",
+    "Unconditional resubmission",
+    "Universal payment",
+    "Exempt applicants need not apply",
+    "Invented deadline"
+  ],
+  "provider_output": {
+    "explanation": [
+      {
+        "text": "প্রশিক্ষণ নিবন্ধনের জন্য আবেদনকারীকে অবশ্যই নির্দিষ্ট জেলার বাসিন্দা এবং বর্তমানে শিক্ষার্থী হতে হবে।",
+        "evidence_ids": [
+          "e1"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "আবেদন করার সময় জাতীয় পরিচয়পত্রের কপি জমা দেওয়ার প্রয়োজন নেই।",
+        "evidence_ids": [
+          "e2"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "প্রতিবন্ধী আবেদনকারীদের কোনো ফি দিতে হবে না, তবে তাদেরও আবেদনপত্র জমা দিতে হবে।",
+        "evidence_ids": [
+          "e4",
+          "e5"
+        ],
+        "status": "source_stated"
+      }
+    ],
+    "steps": [
+      {
+        "text": "আবেদনপত্রে আপনার একটি সচল মোবাইল নম্বর লিখুন।",
+        "evidence_ids": [
+          "e2"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "যদি আগে সনদ জমা না দিয়ে থাকেন, তবে শিক্ষার্থী সনদ অথবা প্রতিষ্ঠানের প্রত্যয়নপত্রের যেকোনো একটি জমা দিন।",
+        "evidence_ids": [
+          "e3"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "সাধারণ আবেদনকারী হলে ২০০ টাকা ফি জমা দিন।",
+        "evidence_ids": [
+          "e4"
+        ],
+        "status": "source_stated"
+      },
+      {
+        "text": "প্রতিবন্ধী আবেদনকারী হলে ফি ছাড়াই আবেদনপত্র জমা দিন।",
+        "evidence_ids": [
+          "e4",
+          "e5"
+        ],
+        "status": "source_stated"
+      }
+    ],
+    "documents": [
+      {
+        "text": "আগে সনদ জমা না দিয়ে থাকলে শিক্ষার্থী সনদ অথবা প্রতিষ্ঠানের প্রত্যয়নপত্রের যেকোনো একটি জমা দিন।",
+        "evidence_ids": [
+          "e3"
+        ],
+        "status": "source_stated"
+      }
+    ],
+    "fees_and_deadlines": {
+      "fees": [
+        {
+          "text": "সাধারণ আবেদনকারীদের জন্য ফি ২০০ টাকা।",
+          "evidence_ids": [
+            "e4"
+          ],
+          "status": "source_stated"
+        },
+        {
+          "text": "প্রতিবন্ধী আবেদনকারীদের কোনো ফি দিতে হবে না।",
+          "evidence_ids": [
+            "e4"
+          ],
+          "status": "source_stated"
+        }
+      ],
+      "deadlines": []
+    },
+    "unknowns": [
+      {
+        "kind": "missing",
+        "text": "সময়সীমা: এই তথ্যটি দেওয়া উৎসে নেই।",
+        "evidence_ids": [
+          "e6"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e1",
+        "excerpt": "শুধু এই জেলার বাসিন্দা এবং বর্তমানে শিক্ষার্থী—দুই শর্তই পূরণ হলে আবেদন করা যাবে।"
+      },
+      {
+        "id": "e2",
+        "excerpt": "আবেদনপত্রে নিজের সচল মোবাইল নম্বর লিখুন; জাতীয় পরিচয়পত্রের কপি জমা দিতে হবে না।"
+      },
+      {
+        "id": "e3",
+        "excerpt": "আগে সনদ জমা না দিয়ে থাকলে শিক্ষার্থী সনদ অথবা প্রতিষ্ঠানের প্রত্যয়নপত্র দিন; দুটোই লাগবে না。"
+      },
+      {
+        "id": "e4",
+        "excerpt": "ফি ২০০ টাকা; প্রতিবন্ধী আবেদনকারীদের ফি দিতে হবে না。"
+      },
+      {
+        "id": "e5",
+        "excerpt": "ফি না লাগলেও আবেদনপত্র জমা দিতে হবে。"
+      },
+      {
+        "id": "e6",
+        "excerpt": "আবেদনের শেষ তারিখ এই নোটিশে দেওয়া নেই。"
+      }
+    ]
+  }
+}

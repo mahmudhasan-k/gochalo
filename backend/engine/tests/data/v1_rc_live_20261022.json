@@ -1,0 +1,253 @@
+{
+  "tested_code_commit": "04f557fc4bec81ca5e56450e3ee5557c38cf999a",
+  "date": "2026-10-22",
+  "limits": {
+    "gemini": 6,
+    "openrouter": 3,
+    "jina": 2
+  },
+  "attempts": [
+    {
+      "provider": "gemini",
+      "phase": "ask_generation",
+      "started": "2026-10-22T11:34:10.766188+00:00",
+      "http_status": 200,
+      "seconds": 3.0
+    },
+    {
+      "provider": "gemini",
+      "phase": "ask_review",
+      "started": "2026-10-22T11:34:22.545153+00:00",
+      "http_status": 200,
+      "seconds": 2.219
+    },
+    {
+      "provider": "openrouter",
+      "phase": "qwen_p1_generation",
+      "started": "2026-10-22T11:36:17.255106+00:00",
+      "http_status": 404,
+      "seconds": 0.609
+    },
+    {
+      "provider": "jina",
+      "phase": "link_retrieval",
+      "started": "2026-10-22T11:36:59.147253+00:00",
+      "http_status": 200,
+      "seconds_to_headers": 5.266
+    },
+    {
+      "provider": "gemini",
+      "phase": "vision_transcription",
+      "started": "2026-10-22T11:38:47.038619+00:00",
+      "http_status": 200,
+      "usage": {
+        "promptTokenCount": 1217,
+        "candidatesTokenCount": 66,
+        "totalTokenCount": 1283,
+        "promptTokensDetails": [
+          {
+            "modality": "IMAGE",
+            "tokenCount": 1100
+          },
+          {
+            "modality": "TEXT",
+            "tokenCount": 117
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "seconds": 13.453
+    },
+    {
+      "provider": "gemini",
+      "phase": "link_generation",
+      "started": "2026-10-22T11:39:19.600317+00:00",
+      "http_status": 200,
+      "seconds": 9.359
+    },
+    {
+      "provider": "gemini",
+      "phase": "link_review",
+      "started": "2026-10-22T11:39:31.544895+00:00",
+      "http_status": 200,
+      "seconds": 9.859
+    }
+  ],
+  "results": {
+    "ask_generation": {
+      "usage": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 413,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 1968,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 1968
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 2381,
+        "traffic_type": null
+      },
+      "finish": [
+        "FinishReason.STOP"
+      ]
+    },
+    "ask_review": {
+      "usage": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 585,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 872,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 872
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 1457,
+        "traffic_type": null
+      },
+      "finish": [
+        "FinishReason.STOP"
+      ]
+    },
+    "ask": {
+      "status": "processed",
+      "semantic_review_complete": true
+    },
+    "qwen_p1_fallback": {
+      "status": "failed",
+      "code": "model_unavailable",
+      "primary_failure": "simulated; zero Gemini requests"
+    },
+    "link_retrieval": {
+      "status": "extracted",
+      "characters": 5046,
+      "title": "EÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“Passport Online Registration Portal"
+    },
+    "vision_transcription": {
+      "status": "extracted",
+      "characters": 258,
+      "fixture": "locally rendered saved public official excerpt"
+    },
+    "link_generation": {
+      "usage": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 3875,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 3039,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 3039
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 6914,
+        "traffic_type": null
+      },
+      "finish": [
+        "FinishReason.STOP"
+      ]
+    },
+    "link_review": {
+      "usage": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 4344,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 3760,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 3760
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 8104,
+        "traffic_type": null
+      },
+      "finish": [
+        "FinishReason.STOP"
+      ]
+    },
+    "link_analysis": {
+      "status": "processed",
+      "semantic_review_complete": true
+    }
+  },
+  "independent_assessment": {
+    "ask": "Online form and no-attestation statements correct for this narrow source. Conservative extra warnings remain.",
+    "vision": "Both Bangla sentences and negation preserved; orthographic normalization and line joining, no invented requirement. Footer also transcribed. Public saved excerpt rendered locally, not a fresh government screenshot. Actual transcript passed offline editable-preview/confirmation-reset replay.",
+    "link": {
+      "source_sha256": "48fbafc63e786b6dac4a2c27a19d45a0a2ad06636740883027ab68eef7fa7e83",
+      "retained": 22,
+      "withheld": 13,
+      "assessment": "Raw unconditional original NID+BRC requirement remains unsafe against age/foreign-mission scope and is withheld. Complete conditional domestic 2/7/15-working-day tiers and fee VAT/payment terms retained; no fee amount invented. Multiple conservative false positives remain. Not general P1 acceptance."
+    },
+    "qwen": "HTTP 404 before any model output. Nine independent P1 criteria all unassessed. Wrapper routed the simulated eligible Gemini failure to real OpenRouter; successful fallback analysis/review not established. No retries or alternate/paid models."
+  },
+  "offline_checks": {
+    "provider_controls": 43,
+    "selected_ui": 5,
+    "saved_live_transcript_replay": 1,
+    "dependency_check": "No broken requirements found",
+    "upload_fix_regressions": 3,
+    "native_browser_replay": "Passed with saved live transcript; new regression rejects old same-key behavior."
+  },
+  "cloud": {
+    "url": "https://shobuj-potro-v1-rc-20261022.streamlit.app/",
+    "initial_commit": "cb70464af268b32fd15bd748cc69f0f7e415a920",
+    "python": "3.12.15",
+    "build": "succeeded",
+    "vision": "Post-reboot corrected uploader verified as key _0 before extraction and _1 afterward. Public Bangla transcript preserved; upload cleared; confirmation preserves draft; editing resets confirmation.",
+    "link": "5046 characters extracted; edit/confirmation reset passed",
+    "configuration": "Owner privately configured keys; Gemini model explicitly pinned. Qwen optional, failed availability.",
+    "original_budget_used": {
+      "gemini": 6,
+      "openrouter": 1,
+      "jina": 2
+    },
+    "additional_shared_budget": 10,
+    "additional_used": 4,
+    "runtime_commit": "7132e9764850f191128a84f91c7eda535554691b",
+    "public_access": "Public sharing enabled and persisted; anonymous HTTP shell returned 200. Full UI exercised in signed-in browser.",
+    "analysis": "Reviewed edited two-sentence public passage through Cloud generation/review. Both statements and literal quotations correct; fees/dates unknown. Conservative extra warnings remain.",
+    "appearance": "Cloud Bangla/English, desktop/mobile and Light/Dark inspected; final runtime preserves same UI/CSS. Fictional sample and saved-response labels verified.",
+    "recovery": "Non-government HTTP loopback URL rejected locally by Cloud; replacing input clears error. Focused offline tests cover provider failures/draft recovery.",
+    "additional_breakdown": {
+      "gemini_vision_stale_initial_revision": 1,
+      "gemini_vision_verified_corrected_revision": 1,
+      "gemini_generation_and_review": 2
+    },
+    "remaining_additional_allowance": 6,
+    "usage_limit": "Cloud UI did not expose HTTP status, latency or token usage; success is based on completed extraction/reviewed result, not invented transport metrics."
+  },
+  "billing": "No billing or credential changes; account billing tier and remaining quotas not independently established.",
+  "release_decision": {
+    "production": "NO-GO",
+    "supervised_candidate": "GO for limited public/synthetic demonstrations with original-source checking",
+    "remaining": [
+      "General P1 scope accuracy unresolved; observed unsafe document requirements withheld.",
+      "Optional Qwen endpoint returned 404; nine P1 criteria unassessed, no successful fallback analysis.",
+      "Conservative false-positive withholding/warnings remain.",
+      "Provider account quota and billing tier not independently verified; no billing changes made.",
+      "Organizer watermark and owner registration/deck/submission/deadline confirmations remain."
+    ],
+    "protected_worktrees": "Fresh current-goal hash/status baseline matches."
+  }
+}

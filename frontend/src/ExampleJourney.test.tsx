@@ -1,0 +1,26 @@
+import {afterEach,expect,it,vi} from 'vitest';
+import {cleanup,render,screen,fireEvent} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import {App} from '../legacy/LegacyJourney';
+import {COPY,JOURNEY_COPY,pageTitle} from './uiCopy';
+import examples from '../public/examples.json';
+afterEach(()=>{cleanup();vi.unstubAllGlobals();localStorage.clear()});
+it.each(['bn','en'] as const)('uses the real shell with locked example stages in %s and no requests',async lang=>{
+ const fetchMock=vi.fn();vi.stubGlobal('fetch',fetchMock);const user=userEvent.setup();const exit=vi.fn();const {container}=render(<App journeyMode="example" initialLanguage={lang} onExit={exit}/>);const c=COPY[lang],j=JOURNEY_COPY[lang];
+ expect(container.querySelector('.workspace .progress')).toBeTruthy();expect(screen.getByLabelText(c.paste)).toHaveProperty('readOnly',true);
+ for(const mode of [c.link,c.image,c.text])expect(screen.getByRole('button',{name:mode})).toHaveProperty('disabled',true);
+ await user.click(screen.getByRole('button',{name:j.next}));expect(screen.getByRole('checkbox')).toHaveProperty('checked',true);expect(screen.getByRole('checkbox')).toHaveProperty('disabled',true);
+ await user.click(screen.getByRole('button',{name:c.back}));await user.click(screen.getByRole('button',{name:j.next}));await user.click(screen.getByRole('button',{name:j.next}));
+ expect(container.querySelectorAll('.result-section').length).toBeGreaterThanOrEqual(6);
+ expect(screen.getByRole('button',{name:c.resetChecklist}).closest('section')).toBe(container.querySelector('.result-section.steps'));
+ const checks=screen.getAllByRole('checkbox');expect(checks.every(x=>(x as HTMLInputElement).disabled)).toBe(true);expect(checks[0]).toHaveProperty('checked',true);expect(checks[1]).toHaveProperty('checked',false);
+ for(const label of [c.copy,c.print,c.resetChecklist,c.general,c.student])expect(screen.getByRole('button',{name:label})).toHaveProperty('disabled',true);
+ expect(container.querySelector('.copy-preview')).toBeNull();expect(container.querySelector('.copy-box pre')).toBeNull();expect(screen.getByText(j.printHelp)).toBeTruthy();
+ await user.click(container.querySelector('.evidence summary')!);expect(container.querySelector('.evidence')).toHaveProperty('open',true);
+ await user.click(screen.getByRole('button',{name:j.previous}));await user.click(screen.getByRole('button',{name:j.next}));
+ expect(Object.keys(localStorage).filter(k=>k.startsWith('shobuj-checklist'))).toEqual([]);expect(fetchMock).not.toHaveBeenCalled();
+ await user.click(screen.getAllByRole('button',{name:j.exit})[0]);expect(exit).toHaveBeenCalledOnce();
+});
+it('preserves a real input draft when leaving the example from review',async()=>{vi.stubGlobal('fetch',vi.fn(async()=>new Response('{"status":"ok"}')));const user=userEvent.setup();render(<App/>);const c=COPY.bn,j=JOURNEY_COPY.bn;await user.click(screen.getByRole('button',{name:c.text}));fireEvent.change(screen.getByLabelText(c.paste),{target:{value:'Original private draft'}});await user.click(screen.getByRole('button',{name:new RegExp(c.example)}));await user.click(screen.getByRole('button',{name:j.next}));await user.click(screen.getByRole('button',{name:j.exit}));expect(screen.getByLabelText(c.paste)).toHaveProperty('value','Original private draft')});
+it('provides complete bilingual prepared coverage with exact references',()=>{for(const lang of ['bn','en']){const sample=examples[(lang+'-general') as keyof typeof examples];const ids=new Map(sample.result.evidence.map(e=>[e.id,e.excerpt]));for(const rows of Object.values(sample.result.sections)){expect(rows.length).toBeGreaterThan(0);for(const row of rows)for(const id of row.evidence_ids){expect(ids.has(id)).toBe(true);expect(sample.source).toContain(ids.get(id))}}for(const item of sample.result.unknowns)for(const id of item.evidence_ids)expect(ids.has(id)).toBe(true);for(const excerpt of ids.values())expect(sample.source).toContain(excerpt);expect(sample.result.unknowns.length).toBeGreaterThanOrEqual(2)}});
+it('labels local titles without changing hosted branding',()=>{for(const host of ['localhost','127.0.0.1','[::1]','::1','preview.localhost'])expect(pageTitle(host)).toMatch(/^Local — /);expect(pageTitle('ss-merge-alpha.vercel.app')).not.toMatch(/^Local/)});

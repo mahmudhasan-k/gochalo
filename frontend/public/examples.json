@@ -1,0 +1,1020 @@
+{
+  "bn-general": {
+    "source": "সবুজ পাঠাগার\nশাপলা মহল্লা\nসদস্যপদে আবেদনের বিজ্ঞপ্তি — ২০২৬\n\nপ্রদর্শনের জন্য তৈরি কাল্পনিক বিজ্ঞপ্তি; এটি সরকারি সেবা নয়।\n\nসবুজ পাঠাগারের ২০২৬ সালের সদস্যপদের জন্য আবেদন আহ্বান করা যাচ্ছে। শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।\n\nসদস্য হতে অনলাইনে ফরম পূরণ করে জমা দিন। আবেদনের সঙ্গে ১ কপি ছবি ও ঠিকানার প্রমাণের কপি যুক্ত করুন। প্রয়োজনীয় কাগজপত্র অসম্পূর্ণ থাকলে আবেদন গ্রহণ করা হবে না।\n\nসাধারণ সদস্য ফি ১০০ টাকা। বর্তমানে অধ্যয়নরত শিক্ষার্থীরা বৈধ শিক্ষার্থী পরিচয়পত্রের কপি দিলে সদস্য ফি লাগবে না। যাঁদের ফি দিতে হবে, তাঁরা ফি জমা দেওয়ার রসিদ আবেদনের সঙ্গে যুক্ত করবেন; ফি ছাড় পাওয়া শিক্ষার্থীদের রসিদ লাগবে না।\n\nঅনলাইনে জমা দিতে না পারলে পাঠাগারের সহায়তাকেন্দ্রে ফরম জমা দেওয়া যাবে। সহায়তাকেন্দ্র প্রতি বুধবার ও বৃহস্পতিবার বিকেল ৩টা থেকে ৫টা পর্যন্ত খোলা থাকবে।\n\nআবেদন জমা দেওয়ার শেষ সময় ৩০ নভেম্বর ২০২৬, বিকেল ৫টা। সদস্যকার্ড সংগ্রহের তারিখ পরে জানানো হবে।\n\nপাঠাগার পরিচালনা পরিষদ\nসবুজ পাঠাগার",
+    "saved_on": "2026-10-22",
+    "source_url": null,
+    "fictional": true,
+    "title": "সবুজ পাঠাগারে সদস্য হওয়ার আবেদন",
+    "result": {
+      "sections": {
+        "explanation": [
+          {
+            "text": "শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা আবেদন করতে পারবেন। শিক্ষার্থীদের ফি ছাড়ের জন্য বৈধ পরিচয়পত্রের কপি প্রয়োজন।",
+            "evidence_ids": [
+              "e2",
+              "e6"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "text": "অনলাইনে ফরম পূরণ করে জমা দিন।",
+            "evidence_ids": [
+              "e3",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "ছবি ও ঠিকানার প্রমাণ যুক্ত করুন। শিক্ষার্থীর ছাড় চাইলে বৈধ পরিচয়পত্রের কপিও দিন।",
+            "evidence_ids": [
+              "e4",
+              "e6",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "ফি প্রযোজ্য হলে রসিদ যুক্ত করুন; ছাড় পাওয়া শিক্ষার্থীদের রসিদ প্রয়োজন নেই।",
+            "evidence_ids": [
+              "e7",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "অনলাইনে জমা দিতে না পারলে বুধবার বা বৃহস্পতিবার বিকেল ৩টা–৫টার মধ্যে সহায়তাকেন্দ্রে জমা দিতে পারেন।",
+            "evidence_ids": [
+              "e8",
+              "e9",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "সম্পূর্ণ কাগজপত্রসহ ৩০ নভেম্বর ২০২৬ বিকেল ৫টার মধ্যে আবেদন জমা দিন। অসম্পূর্ণ আবেদন গ্রহণ করা হবে না।",
+            "evidence_ids": [
+              "e10",
+              "e11",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "text": "১ কপি ছবি ও ঠিকানার প্রমাণের কপি।",
+            "evidence_ids": [
+              "e4",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "শিক্ষার্থীর ফি ছাড় চাইলে বৈধ শিক্ষার্থী পরিচয়পত্রের কপি।",
+            "evidence_ids": [
+              "e6",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "ফি প্রযোজ্য হলে জমা দেওয়ার রসিদ; ছাড় পাওয়া শিক্ষার্থীদের প্রয়োজন নেই।",
+            "evidence_ids": [
+              "e7",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          }
+        ],
+        "fees": [
+          {
+            "text": "সাধারণ ফি ১০০ টাকা; বৈধ পরিচয়পত্রের কপি দেওয়া বর্তমান শিক্ষার্থীদের ফি লাগে না।",
+            "evidence_ids": [
+              "e5",
+              "e6",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "শেষ সময়: ৩০ নভেম্বর ২০২৬, বিকেল ৫টা।",
+            "evidence_ids": [
+              "e10"
+            ]
+          },
+          {
+            "text": "সহায়তাকেন্দ্র: বুধবার ও বৃহস্পতিবার, বিকেল ৩টা–৫টা।",
+            "evidence_ids": [
+              "e9"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "excerpt": "প্রদর্শনের জন্য তৈরি কাল্পনিক বিজ্ঞপ্তি; এটি সরকারি সেবা নয়।"
+        },
+        {
+          "id": "e2",
+          "excerpt": "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+        },
+        {
+          "id": "e3",
+          "excerpt": "সদস্য হতে অনলাইনে ফরম পূরণ করে জমা দিন।"
+        },
+        {
+          "id": "e4",
+          "excerpt": "আবেদনের সঙ্গে ১ কপি ছবি ও ঠিকানার প্রমাণের কপি যুক্ত করুন।"
+        },
+        {
+          "id": "e5",
+          "excerpt": "সাধারণ সদস্য ফি ১০০ টাকা।"
+        },
+        {
+          "id": "e6",
+          "excerpt": "বর্তমানে অধ্যয়নরত শিক্ষার্থীরা বৈধ শিক্ষার্থী পরিচয়পত্রের কপি দিলে সদস্য ফি লাগবে না।"
+        },
+        {
+          "id": "e7",
+          "excerpt": "যাঁদের ফি দিতে হবে, তাঁরা ফি জমা দেওয়ার রসিদ আবেদনের সঙ্গে যুক্ত করবেন; ফি ছাড় পাওয়া শিক্ষার্থীদের রসিদ লাগবে না।"
+        },
+        {
+          "id": "e8",
+          "excerpt": "অনলাইনে জমা দিতে না পারলে পাঠাগারের সহায়তাকেন্দ্রে ফরম জমা দেওয়া যাবে।"
+        },
+        {
+          "id": "e9",
+          "excerpt": "সহায়তাকেন্দ্র প্রতি বুধবার ও বৃহস্পতিবার বিকেল ৩টা থেকে ৫টা পর্যন্ত খোলা থাকবে।"
+        },
+        {
+          "id": "e10",
+          "excerpt": "আবেদন জমা দেওয়ার শেষ সময় ৩০ নভেম্বর ২০২৬, বিকেল ৫টা।"
+        },
+        {
+          "id": "e11",
+          "excerpt": "প্রয়োজনীয় কাগজপত্র অসম্পূর্ণ থাকলে আবেদন গ্রহণ করা হবে না।"
+        },
+        {
+          "id": "e12",
+          "excerpt": "সদস্যকার্ড সংগ্রহের তারিখ পরে জানানো হবে।"
+        }
+      ],
+      "unknowns": [
+        {
+          "kind": "unverified",
+          "text": "সদস্যকার্ড সংগ্রহের নির্দিষ্ট তারিখ এখনও জানানো হয়নি।",
+          "evidence_ids": [
+            "e12"
+          ],
+          "category": "deadlines",
+          "reason_code": "incomplete_review"
+        },
+        {
+          "kind": "unverified",
+          "text": "আবেদন নিষ্পত্তি হতে কত দিন লাগবে, তা বিজ্ঞপ্তিতে বলা নেই।",
+          "evidence_ids": [],
+          "category": "deadlines",
+          "reason_code": "incomplete_review"
+        }
+      ],
+      "withheld_count": 0,
+      "partial": false,
+      "demo": true,
+      "has_guidance": true,
+      "review_mode": "saved_example",
+      "semantic_review_complete": false,
+      "section_states": {
+        "explanation": "available",
+        "steps": "available",
+        "documents": "available",
+        "fees": "available",
+        "deadlines": "partial"
+      }
+    }
+  },
+  "bn-student": {
+    "source": "সবুজ পাঠাগার\nশাপলা মহল্লা\nসদস্যপদে আবেদনের বিজ্ঞপ্তি — ২০২৬\n\nপ্রদর্শনের জন্য তৈরি কাল্পনিক বিজ্ঞপ্তি; এটি সরকারি সেবা নয়।\n\nসবুজ পাঠাগারের ২০২৬ সালের সদস্যপদের জন্য আবেদন আহ্বান করা যাচ্ছে। শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।\n\nসদস্য হতে অনলাইনে ফরম পূরণ করে জমা দিন। আবেদনের সঙ্গে ১ কপি ছবি ও ঠিকানার প্রমাণের কপি যুক্ত করুন। প্রয়োজনীয় কাগজপত্র অসম্পূর্ণ থাকলে আবেদন গ্রহণ করা হবে না।\n\nসাধারণ সদস্য ফি ১০০ টাকা। বর্তমানে অধ্যয়নরত শিক্ষার্থীরা বৈধ শিক্ষার্থী পরিচয়পত্রের কপি দিলে সদস্য ফি লাগবে না। যাঁদের ফি দিতে হবে, তাঁরা ফি জমা দেওয়ার রসিদ আবেদনের সঙ্গে যুক্ত করবেন; ফি ছাড় পাওয়া শিক্ষার্থীদের রসিদ লাগবে না।\n\nঅনলাইনে জমা দিতে না পারলে পাঠাগারের সহায়তাকেন্দ্রে ফরম জমা দেওয়া যাবে। সহায়তাকেন্দ্র প্রতি বুধবার ও বৃহস্পতিবার বিকেল ৩টা থেকে ৫টা পর্যন্ত খোলা থাকবে।\n\nআবেদন জমা দেওয়ার শেষ সময় ৩০ নভেম্বর ২০২৬, বিকেল ৫টা। সদস্যকার্ড সংগ্রহের তারিখ পরে জানানো হবে।\n\nপাঠাগার পরিচালনা পরিষদ\nসবুজ পাঠাগার",
+    "saved_on": "2026-10-22",
+    "source_url": null,
+    "fictional": true,
+    "title": "সবুজ পাঠাগারে সদস্য হওয়ার আবেদন",
+    "result": {
+      "sections": {
+        "explanation": [
+          {
+            "text": "শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা আবেদন করতে পারবেন। শিক্ষার্থীদের ফি ছাড়ের জন্য বৈধ পরিচয়পত্রের কপি প্রয়োজন।",
+            "evidence_ids": [
+              "e2",
+              "e6"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "text": "অনলাইনে ফরম পূরণ করে জমা দিন।",
+            "evidence_ids": [
+              "e3",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "ছবি ও ঠিকানার প্রমাণ যুক্ত করুন। শিক্ষার্থীর ছাড় চাইলে বৈধ পরিচয়পত্রের কপিও দিন।",
+            "evidence_ids": [
+              "e4",
+              "e6",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "ফি প্রযোজ্য হলে রসিদ যুক্ত করুন; ছাড় পাওয়া শিক্ষার্থীদের রসিদ প্রয়োজন নেই।",
+            "evidence_ids": [
+              "e7",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "অনলাইনে জমা দিতে না পারলে বুধবার বা বৃহস্পতিবার বিকেল ৩টা–৫টার মধ্যে সহায়তাকেন্দ্রে জমা দিতে পারেন।",
+            "evidence_ids": [
+              "e8",
+              "e9",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "সম্পূর্ণ কাগজপত্রসহ ৩০ নভেম্বর ২০২৬ বিকেল ৫টার মধ্যে আবেদন জমা দিন। অসম্পূর্ণ আবেদন গ্রহণ করা হবে না।",
+            "evidence_ids": [
+              "e10",
+              "e11",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "text": "১ কপি ছবি ও ঠিকানার প্রমাণের কপি।",
+            "evidence_ids": [
+              "e4",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "শিক্ষার্থীর ফি ছাড় চাইলে বৈধ শিক্ষার্থী পরিচয়পত্রের কপি।",
+            "evidence_ids": [
+              "e6",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "ফি প্রযোজ্য হলে জমা দেওয়ার রসিদ; ছাড় পাওয়া শিক্ষার্থীদের প্রয়োজন নেই।",
+            "evidence_ids": [
+              "e7",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          }
+        ],
+        "fees": [
+          {
+            "text": "সাধারণ ফি ১০০ টাকা; বৈধ পরিচয়পত্রের কপি দেওয়া বর্তমান শিক্ষার্থীদের ফি লাগে না।",
+            "evidence_ids": [
+              "e5",
+              "e6",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "শেষ সময়: ৩০ নভেম্বর ২০২৬, বিকেল ৫টা।",
+            "evidence_ids": [
+              "e10"
+            ]
+          },
+          {
+            "text": "সহায়তাকেন্দ্র: বুধবার ও বৃহস্পতিবার, বিকেল ৩টা–৫টা।",
+            "evidence_ids": [
+              "e9"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "excerpt": "প্রদর্শনের জন্য তৈরি কাল্পনিক বিজ্ঞপ্তি; এটি সরকারি সেবা নয়।"
+        },
+        {
+          "id": "e2",
+          "excerpt": "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+        },
+        {
+          "id": "e3",
+          "excerpt": "সদস্য হতে অনলাইনে ফরম পূরণ করে জমা দিন।"
+        },
+        {
+          "id": "e4",
+          "excerpt": "আবেদনের সঙ্গে ১ কপি ছবি ও ঠিকানার প্রমাণের কপি যুক্ত করুন।"
+        },
+        {
+          "id": "e5",
+          "excerpt": "সাধারণ সদস্য ফি ১০০ টাকা।"
+        },
+        {
+          "id": "e6",
+          "excerpt": "বর্তমানে অধ্যয়নরত শিক্ষার্থীরা বৈধ শিক্ষার্থী পরিচয়পত্রের কপি দিলে সদস্য ফি লাগবে না।"
+        },
+        {
+          "id": "e7",
+          "excerpt": "যাঁদের ফি দিতে হবে, তাঁরা ফি জমা দেওয়ার রসিদ আবেদনের সঙ্গে যুক্ত করবেন; ফি ছাড় পাওয়া শিক্ষার্থীদের রসিদ লাগবে না।"
+        },
+        {
+          "id": "e8",
+          "excerpt": "অনলাইনে জমা দিতে না পারলে পাঠাগারের সহায়তাকেন্দ্রে ফরম জমা দেওয়া যাবে।"
+        },
+        {
+          "id": "e9",
+          "excerpt": "সহায়তাকেন্দ্র প্রতি বুধবার ও বৃহস্পতিবার বিকেল ৩টা থেকে ৫টা পর্যন্ত খোলা থাকবে।"
+        },
+        {
+          "id": "e10",
+          "excerpt": "আবেদন জমা দেওয়ার শেষ সময় ৩০ নভেম্বর ২০২৬, বিকেল ৫টা।"
+        },
+        {
+          "id": "e11",
+          "excerpt": "প্রয়োজনীয় কাগজপত্র অসম্পূর্ণ থাকলে আবেদন গ্রহণ করা হবে না।"
+        },
+        {
+          "id": "e12",
+          "excerpt": "সদস্যকার্ড সংগ্রহের তারিখ পরে জানানো হবে।"
+        }
+      ],
+      "unknowns": [
+        {
+          "kind": "unverified",
+          "text": "সদস্যকার্ড সংগ্রহের নির্দিষ্ট তারিখ এখনও জানানো হয়নি।",
+          "evidence_ids": [
+            "e12"
+          ],
+          "category": "deadlines",
+          "reason_code": "incomplete_review"
+        },
+        {
+          "kind": "unverified",
+          "text": "আবেদন নিষ্পত্তি হতে কত দিন লাগবে, তা বিজ্ঞপ্তিতে বলা নেই।",
+          "evidence_ids": [],
+          "category": "deadlines",
+          "reason_code": "incomplete_review"
+        }
+      ],
+      "withheld_count": 0,
+      "partial": false,
+      "demo": true,
+      "has_guidance": true,
+      "review_mode": "saved_example",
+      "semantic_review_complete": false,
+      "section_states": {
+        "explanation": "available",
+        "steps": "available",
+        "documents": "available",
+        "fees": "available",
+        "deadlines": "partial"
+      }
+    }
+  },
+  "bn-epassport": {
+    "source": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।",
+    "saved_on": "2026-10-21",
+    "source_url": "https://www.epassport.gov.bd/instructions/instructions",
+    "fictional": false,
+    "title": "ই-পাসপোর্টের অনলাইন আবেদন: প্রস্তুত উদাহরণ",
+    "result": {
+      "sections": {
+        "explanation": [
+          {
+            "text": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যায়।",
+            "evidence_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "text": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করুন।",
+            "evidence_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "documents": [],
+        "fees": [],
+        "deadlines": []
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "excerpt": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।"
+        }
+      ],
+      "unknowns": [
+        {
+          "kind": "unverified",
+          "text": "এই উদাহরণে সরকারি পোর্টালের একটি বাক্য ব্যবহার করা হয়েছে। এটি সম্পূর্ণ আবেদন নির্দেশিকা নয়। পরের ধাপ, যোগ্যতা ও বর্তমান শর্ত জানতে মূল সরকারি নির্দেশনা দেখুন।",
+          "evidence_ids": [],
+          "category": "general",
+          "reason_code": "incomplete_review"
+        },
+        {
+          "kind": "unverified",
+          "text": "কাগজপত্র: রাখা নমুনার এই তথ্য নতুন করে পর্যালোচনা করা হয়নি। মূল নির্দেশনা মিলিয়ে নিন।",
+          "evidence_ids": [],
+          "category": "documents",
+          "reason_code": "incomplete_review"
+        },
+        {
+          "kind": "unverified",
+          "text": "ফি: রাখা নমুনার এই তথ্য নতুন করে পর্যালোচনা করা হয়নি। মূল নির্দেশনা মিলিয়ে নিন।",
+          "evidence_ids": [],
+          "category": "fees",
+          "reason_code": "incomplete_review"
+        },
+        {
+          "kind": "unverified",
+          "text": "সময় ও তারিখ: রাখা নমুনার এই তথ্য নতুন করে পর্যালোচনা করা হয়নি। মূল নির্দেশনা মিলিয়ে নিন।",
+          "evidence_ids": [],
+          "category": "deadlines",
+          "reason_code": "incomplete_review"
+        }
+      ],
+      "withheld_count": 0,
+      "partial": false,
+      "demo": true,
+      "has_guidance": true,
+      "review_mode": "saved_example",
+      "semantic_review_complete": false,
+      "section_states": {
+        "explanation": "available",
+        "steps": "available",
+        "documents": "unconfirmed",
+        "fees": "unconfirmed",
+        "deadlines": "unconfirmed"
+      }
+    }
+  },
+  "en-general": {
+    "source": "সবুজ পাঠাগার\nশাপলা মহল্লা\nসদস্যপদে আবেদনের বিজ্ঞপ্তি — ২০২৬\n\nপ্রদর্শনের জন্য তৈরি কাল্পনিক বিজ্ঞপ্তি; এটি সরকারি সেবা নয়।\n\nসবুজ পাঠাগারের ২০২৬ সালের সদস্যপদের জন্য আবেদন আহ্বান করা যাচ্ছে। শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।\n\nসদস্য হতে অনলাইনে ফরম পূরণ করে জমা দিন। আবেদনের সঙ্গে ১ কপি ছবি ও ঠিকানার প্রমাণের কপি যুক্ত করুন। প্রয়োজনীয় কাগজপত্র অসম্পূর্ণ থাকলে আবেদন গ্রহণ করা হবে না।\n\nসাধারণ সদস্য ফি ১০০ টাকা। বর্তমানে অধ্যয়নরত শিক্ষার্থীরা বৈধ শিক্ষার্থী পরিচয়পত্রের কপি দিলে সদস্য ফি লাগবে না। যাঁদের ফি দিতে হবে, তাঁরা ফি জমা দেওয়ার রসিদ আবেদনের সঙ্গে যুক্ত করবেন; ফি ছাড় পাওয়া শিক্ষার্থীদের রসিদ লাগবে না।\n\nঅনলাইনে জমা দিতে না পারলে পাঠাগারের সহায়তাকেন্দ্রে ফরম জমা দেওয়া যাবে। সহায়তাকেন্দ্র প্রতি বুধবার ও বৃহস্পতিবার বিকেল ৩টা থেকে ৫টা পর্যন্ত খোলা থাকবে।\n\nআবেদন জমা দেওয়ার শেষ সময় ৩০ নভেম্বর ২০২৬, বিকেল ৫টা। সদস্যকার্ড সংগ্রহের তারিখ পরে জানানো হবে।\n\nপাঠাগার পরিচালনা পরিষদ\nসবুজ পাঠাগার",
+    "saved_on": "2026-10-22",
+    "source_url": null,
+    "fictional": true,
+    "title": "Joining Shobuj Library",
+    "result": {
+      "sections": {
+        "explanation": [
+          {
+            "text": "Shapla neighbourhood residents aged 16 or older may apply. Students need a valid student-ID copy for the fee exemption.",
+            "evidence_ids": [
+              "e2",
+              "e6"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "text": "Complete and submit the membership form online.",
+            "evidence_ids": [
+              "e3",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "Attach a photograph and address proof. Include a valid student-ID copy if claiming the student exemption.",
+            "evidence_ids": [
+              "e4",
+              "e6",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "Attach the payment receipt if the fee applies; exempt students do not need a receipt.",
+            "evidence_ids": [
+              "e7",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "If unable to submit online, use the assistance centre on Wednesday or Thursday between 3 and 5 pm.",
+            "evidence_ids": [
+              "e8",
+              "e9",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "Submit complete documents by 5 pm on 30 November 2026. Incomplete applications will not be accepted.",
+            "evidence_ids": [
+              "e10",
+              "e11",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "text": "One photograph and a copy of address proof.",
+            "evidence_ids": [
+              "e4",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "A valid student-ID copy if claiming the student fee exemption.",
+            "evidence_ids": [
+              "e6",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "Payment receipt when the fee applies; not needed for exempt students.",
+            "evidence_ids": [
+              "e7",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          }
+        ],
+        "fees": [
+          {
+            "text": "The general fee is 100 taka; current students providing a valid student-ID copy are exempt.",
+            "evidence_ids": [
+              "e5",
+              "e6",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "Deadline: 30 November 2026 at 5 pm.",
+            "evidence_ids": [
+              "e10"
+            ]
+          },
+          {
+            "text": "Assistance centre: Wednesday and Thursday, 3–5 pm.",
+            "evidence_ids": [
+              "e9"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "excerpt": "প্রদর্শনের জন্য তৈরি কাল্পনিক বিজ্ঞপ্তি; এটি সরকারি সেবা নয়।"
+        },
+        {
+          "id": "e2",
+          "excerpt": "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+        },
+        {
+          "id": "e3",
+          "excerpt": "সদস্য হতে অনলাইনে ফরম পূরণ করে জমা দিন।"
+        },
+        {
+          "id": "e4",
+          "excerpt": "আবেদনের সঙ্গে ১ কপি ছবি ও ঠিকানার প্রমাণের কপি যুক্ত করুন।"
+        },
+        {
+          "id": "e5",
+          "excerpt": "সাধারণ সদস্য ফি ১০০ টাকা।"
+        },
+        {
+          "id": "e6",
+          "excerpt": "বর্তমানে অধ্যয়নরত শিক্ষার্থীরা বৈধ শিক্ষার্থী পরিচয়পত্রের কপি দিলে সদস্য ফি লাগবে না।"
+        },
+        {
+          "id": "e7",
+          "excerpt": "যাঁদের ফি দিতে হবে, তাঁরা ফি জমা দেওয়ার রসিদ আবেদনের সঙ্গে যুক্ত করবেন; ফি ছাড় পাওয়া শিক্ষার্থীদের রসিদ লাগবে না।"
+        },
+        {
+          "id": "e8",
+          "excerpt": "অনলাইনে জমা দিতে না পারলে পাঠাগারের সহায়তাকেন্দ্রে ফরম জমা দেওয়া যাবে।"
+        },
+        {
+          "id": "e9",
+          "excerpt": "সহায়তাকেন্দ্র প্রতি বুধবার ও বৃহস্পতিবার বিকেল ৩টা থেকে ৫টা পর্যন্ত খোলা থাকবে।"
+        },
+        {
+          "id": "e10",
+          "excerpt": "আবেদন জমা দেওয়ার শেষ সময় ৩০ নভেম্বর ২০২৬, বিকেল ৫টা।"
+        },
+        {
+          "id": "e11",
+          "excerpt": "প্রয়োজনীয় কাগজপত্র অসম্পূর্ণ থাকলে আবেদন গ্রহণ করা হবে না।"
+        },
+        {
+          "id": "e12",
+          "excerpt": "সদস্যকার্ড সংগ্রহের তারিখ পরে জানানো হবে।"
+        }
+      ],
+      "unknowns": [
+        {
+          "kind": "unverified",
+          "text": "The card-collection date has not been announced yet.",
+          "evidence_ids": [
+            "e12"
+          ],
+          "category": "deadlines",
+          "reason_code": "incomplete_review"
+        },
+        {
+          "kind": "unverified",
+          "text": "The notice does not state how long processing takes.",
+          "evidence_ids": [],
+          "category": "deadlines",
+          "reason_code": "incomplete_review"
+        }
+      ],
+      "withheld_count": 0,
+      "partial": false,
+      "demo": true,
+      "has_guidance": true,
+      "review_mode": "saved_example",
+      "semantic_review_complete": false,
+      "section_states": {
+        "explanation": "available",
+        "steps": "available",
+        "documents": "available",
+        "fees": "available",
+        "deadlines": "partial"
+      }
+    }
+  },
+  "en-student": {
+    "source": "সবুজ পাঠাগার\nশাপলা মহল্লা\nসদস্যপদে আবেদনের বিজ্ঞপ্তি — ২০২৬\n\nপ্রদর্শনের জন্য তৈরি কাল্পনিক বিজ্ঞপ্তি; এটি সরকারি সেবা নয়।\n\nসবুজ পাঠাগারের ২০২৬ সালের সদস্যপদের জন্য আবেদন আহ্বান করা যাচ্ছে। শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।\n\nসদস্য হতে অনলাইনে ফরম পূরণ করে জমা দিন। আবেদনের সঙ্গে ১ কপি ছবি ও ঠিকানার প্রমাণের কপি যুক্ত করুন। প্রয়োজনীয় কাগজপত্র অসম্পূর্ণ থাকলে আবেদন গ্রহণ করা হবে না।\n\nসাধারণ সদস্য ফি ১০০ টাকা। বর্তমানে অধ্যয়নরত শিক্ষার্থীরা বৈধ শিক্ষার্থী পরিচয়পত্রের কপি দিলে সদস্য ফি লাগবে না। যাঁদের ফি দিতে হবে, তাঁরা ফি জমা দেওয়ার রসিদ আবেদনের সঙ্গে যুক্ত করবেন; ফি ছাড় পাওয়া শিক্ষার্থীদের রসিদ লাগবে না।\n\nঅনলাইনে জমা দিতে না পারলে পাঠাগারের সহায়তাকেন্দ্রে ফরম জমা দেওয়া যাবে। সহায়তাকেন্দ্র প্রতি বুধবার ও বৃহস্পতিবার বিকেল ৩টা থেকে ৫টা পর্যন্ত খোলা থাকবে।\n\nআবেদন জমা দেওয়ার শেষ সময় ৩০ নভেম্বর ২০২৬, বিকেল ৫টা। সদস্যকার্ড সংগ্রহের তারিখ পরে জানানো হবে।\n\nপাঠাগার পরিচালনা পরিষদ\nসবুজ পাঠাগার",
+    "saved_on": "2026-10-22",
+    "source_url": null,
+    "fictional": true,
+    "title": "Joining Shobuj Library",
+    "result": {
+      "sections": {
+        "explanation": [
+          {
+            "text": "Shapla neighbourhood residents aged 16 or older may apply. Students need a valid student-ID copy for the fee exemption.",
+            "evidence_ids": [
+              "e2",
+              "e6"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "text": "Complete and submit the membership form online.",
+            "evidence_ids": [
+              "e3",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "Attach a photograph and address proof. Include a valid student-ID copy if claiming the student exemption.",
+            "evidence_ids": [
+              "e4",
+              "e6",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "Attach the payment receipt if the fee applies; exempt students do not need a receipt.",
+            "evidence_ids": [
+              "e7",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "If unable to submit online, use the assistance centre on Wednesday or Thursday between 3 and 5 pm.",
+            "evidence_ids": [
+              "e8",
+              "e9",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "Submit complete documents by 5 pm on 30 November 2026. Incomplete applications will not be accepted.",
+            "evidence_ids": [
+              "e10",
+              "e11",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "text": "One photograph and a copy of address proof.",
+            "evidence_ids": [
+              "e4",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "A valid student-ID copy if claiming the student fee exemption.",
+            "evidence_ids": [
+              "e6",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          },
+          {
+            "text": "Payment receipt when the fee applies; not needed for exempt students.",
+            "evidence_ids": [
+              "e7",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          }
+        ],
+        "fees": [
+          {
+            "text": "The general fee is 100 taka; current students providing a valid student-ID copy are exempt.",
+            "evidence_ids": [
+              "e5",
+              "e6",
+              "e2"
+            ],
+            "source_conditions": [
+              "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+            ]
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "Deadline: 30 November 2026 at 5 pm.",
+            "evidence_ids": [
+              "e10"
+            ]
+          },
+          {
+            "text": "Assistance centre: Wednesday and Thursday, 3–5 pm.",
+            "evidence_ids": [
+              "e9"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "excerpt": "প্রদর্শনের জন্য তৈরি কাল্পনিক বিজ্ঞপ্তি; এটি সরকারি সেবা নয়।"
+        },
+        {
+          "id": "e2",
+          "excerpt": "শুধু শাপলা মহল্লার ১৬ বছর বা তার বেশি বয়সী বাসিন্দারা সদস্যপদের আবেদন করতে পারবেন।"
+        },
+        {
+          "id": "e3",
+          "excerpt": "সদস্য হতে অনলাইনে ফরম পূরণ করে জমা দিন।"
+        },
+        {
+          "id": "e4",
+          "excerpt": "আবেদনের সঙ্গে ১ কপি ছবি ও ঠিকানার প্রমাণের কপি যুক্ত করুন।"
+        },
+        {
+          "id": "e5",
+          "excerpt": "সাধারণ সদস্য ফি ১০০ টাকা।"
+        },
+        {
+          "id": "e6",
+          "excerpt": "বর্তমানে অধ্যয়নরত শিক্ষার্থীরা বৈধ শিক্ষার্থী পরিচয়পত্রের কপি দিলে সদস্য ফি লাগবে না।"
+        },
+        {
+          "id": "e7",
+          "excerpt": "যাঁদের ফি দিতে হবে, তাঁরা ফি জমা দেওয়ার রসিদ আবেদনের সঙ্গে যুক্ত করবেন; ফি ছাড় পাওয়া শিক্ষার্থীদের রসিদ লাগবে না।"
+        },
+        {
+          "id": "e8",
+          "excerpt": "অনলাইনে জমা দিতে না পারলে পাঠাগারের সহায়তাকেন্দ্রে ফরম জমা দেওয়া যাবে।"
+        },
+        {
+          "id": "e9",
+          "excerpt": "সহায়তাকেন্দ্র প্রতি বুধবার ও বৃহস্পতিবার বিকেল ৩টা থেকে ৫টা পর্যন্ত খোলা থাকবে।"
+        },
+        {
+          "id": "e10",
+          "excerpt": "আবেদন জমা দেওয়ার শেষ সময় ৩০ নভেম্বর ২০২৬, বিকেল ৫টা।"
+        },
+        {
+          "id": "e11",
+          "excerpt": "প্রয়োজনীয় কাগজপত্র অসম্পূর্ণ থাকলে আবেদন গ্রহণ করা হবে না।"
+        },
+        {
+          "id": "e12",
+          "excerpt": "সদস্যকার্ড সংগ্রহের তারিখ পরে জানানো হবে।"
+        }
+      ],
+      "unknowns": [
+        {
+          "kind": "unverified",
+          "text": "The card-collection date has not been announced yet.",
+          "evidence_ids": [
+            "e12"
+          ],
+          "category": "deadlines",
+          "reason_code": "incomplete_review"
+        },
+        {
+          "kind": "unverified",
+          "text": "The notice does not state how long processing takes.",
+          "evidence_ids": [],
+          "category": "deadlines",
+          "reason_code": "incomplete_review"
+        }
+      ],
+      "withheld_count": 0,
+      "partial": false,
+      "demo": true,
+      "has_guidance": true,
+      "review_mode": "saved_example",
+      "semantic_review_complete": false,
+      "section_states": {
+        "explanation": "available",
+        "steps": "available",
+        "documents": "available",
+        "fees": "available",
+        "deadlines": "partial"
+      }
+    }
+  },
+  "en-epassport": {
+    "source": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।",
+    "saved_on": "2026-10-21",
+    "source_url": "https://www.epassport.gov.bd/instructions/instructions",
+    "fictional": false,
+    "title": "E-passport: saved official-source excerpt",
+    "result": {
+      "sections": {
+        "explanation": [
+          {
+            "text": "The e-passport application form can be completed online.",
+            "evidence_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "text": "Complete the e-passport application form online.",
+            "evidence_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "documents": [],
+        "fees": [],
+        "deadlines": []
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "excerpt": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।"
+        }
+      ],
+      "unknowns": [
+        {
+          "kind": "unverified",
+          "text": "This example covers a single sentence. Consult the original government instructions for eligibility, later steps and current requirements.",
+          "evidence_ids": [],
+          "category": "general",
+          "reason_code": "incomplete_review"
+        },
+        {
+          "kind": "unverified",
+          "text": "Documents: This detail has not received a new review in the saved example. Check the original instructions.",
+          "evidence_ids": [],
+          "category": "documents",
+          "reason_code": "incomplete_review"
+        },
+        {
+          "kind": "unverified",
+          "text": "Fees: This detail has not received a new review in the saved example. Check the original instructions.",
+          "evidence_ids": [],
+          "category": "fees",
+          "reason_code": "incomplete_review"
+        },
+        {
+          "kind": "unverified",
+          "text": "Dates and timeframes: This detail has not received a new review in the saved example. Check the original instructions.",
+          "evidence_ids": [],
+          "category": "deadlines",
+          "reason_code": "incomplete_review"
+        }
+      ],
+      "withheld_count": 0,
+      "partial": false,
+      "demo": true,
+      "has_guidance": true,
+      "review_mode": "saved_example",
+      "semantic_review_complete": false,
+      "section_states": {
+        "explanation": "available",
+        "steps": "available",
+        "documents": "unconfirmed",
+        "fees": "unconfirmed",
+        "deadlines": "unconfirmed"
+      }
+    }
+  }
+}

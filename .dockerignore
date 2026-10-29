@@ -1,0 +1,16 @@
+.git
+.venv
+frontend
+scripts
+supabase
+docs
+.env
+.env.*
+**/.env
+**/.env.*
+**/__pycache__
+**/*.pyc
+**/tests
+**/test*.py
+**/conftest.py
+.pytest_cache

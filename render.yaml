@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: gochalo-api
+    runtime: docker
+    plan: free
+    region: singapore
+    branch: main
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash-lite
+      - key: APP_ENV
+        value: production
+      - key: FRONTEND_ORIGINS
+        sync: false
+      - key: DETERMINISTIC_REVIEW_FALLBACK
+        value: "true"
+      - key: LOCAL_EVALUATION_CAPTURE
+        value: "false"
+      - key: RESEARCH_FREE_ACCESS_CONFIRMED
+        value: "false"

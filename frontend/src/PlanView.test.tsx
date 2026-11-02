@@ -20,7 +20,7 @@ it('preserves exact quotations, local conditions, original input and human-revie
 it('offers manual copy on clipboard denial and calls print with the disclosure in printable content',async()=>{
  const user=userEvent.setup();const row=sample();row.result.review_mode='general_ask';const print=vi.spyOn(window,'print').mockImplementation(()=>{});
  Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:vi.fn(async()=>{throw new Error('denied')})}});
- const noop=()=>{};render(<PlanView row={row} tasks={candidateTasks(row)} lang="en" persistent status="Saved" onSave={noop} onRename={noop} onTask={noop} onBack={noop} onEdit={noop} onCalendar={noop} onAdd={noop}/>);
+ const noop=()=>{};render(<PlanView row={row} tasks={candidateTasks(row)} lang="en" persistent status="Saved" onSave={noop} onRename={noop} onTask={noop} onSaveTasks={noop} onBack={noop} onEdit={noop} onCalendar={noop} onAdd={noop}/>);
  await user.click(screen.getByRole('button',{name:PRODUCT_COPY.en.copy}));expect(await screen.findByLabelText(PRODUCT_COPY.en.manualCopy)).toHaveProperty('value',planSummary(row,candidateTasks(row),'en'));
  await user.click(screen.getByRole('button',{name:PRODUCT_COPY.en.print}));expect(print).toHaveBeenCalledOnce();expect(screen.getByRole('note').textContent).toContain(ASK_COPY.en.warning);print.mockRestore();
 });
@@ -36,11 +36,11 @@ it('copies retrieved Search source text with checked-source limitations',()=>{
 it.each(['en','bn'] as const)('uses the same six-section order on screen and in copy (%s)',lang=>{
  const row=sample(),noop=()=>{},m=MIGRATION_COPY[lang];
  if(lang==='en'){
-  expect(m.steps).toBe('Steps');expect(m.documents).toBe('Required Documents');
+  expect(m.steps).toBe('Tasks');expect(m.documents).toBe('Required Documents');
   expect(COPY.en.steps).toBe(m.steps);expect(ASK_COPY.en.steps).toBe(m.steps);expect(COPY.en.documents).toBe(m.documents);
  }
  row.result.unknowns=[{kind:'missing',category:'fees',text:'A fee exemption is unclear.',evidence_ids:[]}];
- render(<PlanView row={row} tasks={candidateTasks(row)} lang={lang} persistent status="Saved" onSave={noop} onRename={noop} onTask={noop} onBack={noop} onEdit={noop} onCalendar={noop} onAdd={noop}/>);
+ render(<PlanView row={row} tasks={candidateTasks(row)} lang={lang} persistent status="Saved" onSave={noop} onRename={noop} onTask={noop} onSaveTasks={noop} onBack={noop} onEdit={noop} onCalendar={noop} onAdd={noop}/>);
  const labels=[...RESULT_ORDER.map(key=>m[key]),m.others];
  expect(Array.from(document.querySelectorAll('.plan-section>h2,.plan-section>.section-heading>h2')).slice(0,6).map(node=>node.textContent)).toEqual(labels);
  const copy=planSummary(row,[],lang),positions=labels.map(label=>copy.indexOf(label+':\n'));
@@ -50,7 +50,7 @@ it.each(['en','bn'] as const)('uses the same six-section order on screen and in 
 
 it('keeps empty fees and deadlines explicit without implying free or unlimited service',()=>{
  const row=sample(),noop=()=>{};row.result.sections={};row.result.unknowns=[];
- render(<PlanView row={row} tasks={[]} lang="en" persistent status="Saved" onSave={noop} onRename={noop} onTask={noop} onBack={noop} onEdit={noop} onCalendar={noop} onAdd={noop}/>);
+ render(<PlanView row={row} tasks={[]} lang="en" persistent status="Saved" onSave={noop} onRename={noop} onTask={noop} onSaveTasks={noop} onBack={noop} onEdit={noop} onCalendar={noop} onAdd={noop}/>);
  expect(document.querySelector('.section-fees')?.textContent).toContain(MIGRATION_COPY.en.emptyFees);
  expect(document.querySelector('.section-deadlines')?.textContent).toContain(MIGRATION_COPY.en.emptyDeadlines);
  expect(planSummary(row,[],'en')).toContain(MIGRATION_COPY.en.emptyFees);
@@ -60,7 +60,7 @@ it('keeps empty fees and deadlines explicit without implying free or unlimited s
 it('keeps the unreviewed disclosure once in copy and never labels unreviewed rows as web cited',()=>{
  const row=sample(),noop=()=>{};row.result.review_mode='general_ask';row.result.evidence=[];
  for(const items of Object.values(row.result.sections))for(const item of items){item.evidence_ids=[];item.support_status='unreviewed'}
- render(<PlanView row={row} tasks={candidateTasks(row)} lang="en" persistent status="Saved" onSave={noop} onRename={noop} onTask={noop} onBack={noop} onEdit={noop} onCalendar={noop} onAdd={noop}/>);
+ render(<PlanView row={row} tasks={candidateTasks(row)} lang="en" persistent status="Saved" onSave={noop} onRename={noop} onTask={noop} onSaveTasks={noop} onBack={noop} onEdit={noop} onCalendar={noop} onAdd={noop}/>);
  expect(document.querySelector('.plan-categories')?.children).toHaveLength(6);
  expect(Array.from(document.querySelectorAll('.support-label')).every(node=>node.textContent==='Not checked against a source')).toBe(true);
  expect(planSummary(row,[],'en').split(ASK_COPY.en.warning)).toHaveLength(2);
@@ -69,7 +69,7 @@ it('keeps the unreviewed disclosure once in copy and never labels unreviewed row
 it('shares exactly the copy-plan text and keeps documents as plain text',async()=>{
  const row=sample(),tasks=candidateTasks(row),noop=()=>{},share=vi.fn(async()=>{});
  Object.defineProperty(navigator,'share',{configurable:true,value:share});
- render(<PlanView row={row} tasks={tasks} lang="en" persistent status="Saved" onSave={noop} onRename={noop} onTask={noop} onBack={noop} onEdit={noop} onCalendar={noop} onAdd={noop}/>);
+ render(<PlanView row={row} tasks={tasks} lang="en" persistent status="Saved" onSave={noop} onRename={noop} onTask={noop} onSaveTasks={noop} onBack={noop} onEdit={noop} onCalendar={noop} onAdd={noop}/>);
  await userEvent.setup().click(screen.getByRole('button',{name:PRODUCT_COPY.en.share}));
  expect(share).toHaveBeenCalledWith({text:planSummary(row,tasks,'en')});
  expect(document.querySelector('.section-documents input')).toBeNull();
@@ -80,8 +80,25 @@ it('shares exactly the copy-plan text and keeps documents as plain text',async()
 
 it('does not warn a saved plan to save itself when starting over',async()=>{
  const row=sample(),noop=()=>{};
- render(<PlanView row={row} tasks={candidateTasks(row)} lang="en" persistent status="Saved" onSave={noop} onRename={noop} onTask={noop} onBack={noop} onEdit={noop} onCalendar={noop} onAdd={noop}/>);
+ render(<PlanView row={row} tasks={candidateTasks(row)} lang="en" persistent status="Saved" onSave={noop} onRename={noop} onTask={noop} onSaveTasks={noop} onBack={noop} onEdit={noop} onCalendar={noop} onAdd={noop}/>);
  await userEvent.setup().click(screen.getByRole('button',{name:COPY.en.new}));
  expect(screen.getByText(POLISH_COPY.en.newSavedPrompt)).toBeTruthy();
  expect(screen.queryByText(POLISH_COPY.en.newPrompt)).toBeNull();
+});
+
+it('keeps personal tasks inside Tasks in copied output',()=>{
+ const row=sample(),task={...candidateTasks(row)[0],id:'personal',origin:null,title:'Call the office',completed:true,dueDate:'2026-11-03'};
+ const output=planSummary(row,[task],'en');
+ expect(output.indexOf('Call the office')).toBeGreaterThan(output.indexOf(MIGRATION_COPY.en.steps+':'));
+ expect(output.indexOf('Call the office')).toBeLessThan(output.indexOf(MIGRATION_COPY.en.deadlines+':'));
+ expect(output).toContain('[✓] Call the office');expect(output).toContain('2026-11-03');
+ row.result.sections.steps=[];const personalOnly=planSummary(row,[task],'en').split(MIGRATION_COPY.en.steps+':')[1].split(MIGRATION_COPY.en.deadlines+':')[0];
+ expect(personalOnly).toContain('Call the office');expect(personalOnly).not.toContain(MIGRATION_COPY.en.empty);
+});
+it('keeps the save action available and hides success when local storage has failed',async()=>{
+ const row=sample(),tasks=candidateTasks(row).map(task=>({...task,saved:true})),save=vi.fn(),noop=()=>{};
+ render(<PlanView row={row} tasks={tasks} lang="en" persistent status="Not saved" taskStorageError onSave={noop} onRename={noop} onTask={noop} onSaveTasks={save} onBack={noop} onEdit={noop} onCalendar={noop} onAdd={noop}/>);
+ expect(screen.queryByText(PRODUCT_COPY.en.tasksSavedHelp)).toBeNull();
+ const button=screen.getByRole('button',{name:PRODUCT_COPY.en.saveAll});expect(button).toHaveProperty('disabled',false);
+ await userEvent.click(button);expect(save).toHaveBeenCalledOnce();
 });

@@ -111,9 +111,9 @@ const demos={
       "title": "How do I apply for Dhaka University admission?",
       "chipLabel": "Dhaka University admission",
       "category": "Education",
-      "overview": "(Pre-made demo) Apply to Dhaka University by completing the online form, uploading your photograph and paying the unit application fee. This archived 2025–26 example follows a science-group applicant to the Science Unit: SSC in 2020–23, HSC in 2025, and a combined GPA of at least 8.0 with 3.5 in each exam, including the fourth subject. The application period has ended; the steps below show how that cycle worked.",
+      "overview": "(Pre-made demo) Apply to Dhaka University by completing the online form, uploading your photograph and paying the unit application fee. Then download your admit card, check your seat plan and attend the admission test.",
       "steps": [
-        "Check the passing years and GPA requirements for the Science Unit.",
+        "Check eligibility for the 2025–26 Science Unit: a science-group applicant with SSC in 2020–23, HSC in 2025, and a combined GPA of at least 8.0 with 3.5 in each exam, including the fourth subject.",
         "Open the DU admission portal and enter your SSC/HSC board, roll and passing-year information.",
         "Add your address, mobile number, exam-centre division and any applicable quota details; upload the specified photograph. A parent’s NID number is optional.",
         "Pay BDT 1,050 online or through Sonali, Janata, Agrani or Rupali Bank, then retain the confirmation.",
@@ -126,7 +126,7 @@ const demos={
         "Quota documentation, if applying under a quota"
       ],
       "fees": [
-        "Science Unit application fee for 2025–26: BDT 1,050. This is the archived application charge, not the final university enrolment fee."
+        "Science Unit application fee for 2025–26: BDT 1,050."
       ],
       "deadlines": [
         "Applications opened: 29 October 2025, noon (Dhaka).",
@@ -264,9 +264,9 @@ const demos={
       "title": "ঢাকা বিশ্ববিদ্যালয়ে ভর্তির জন্য কীভাবে আবেদন করব?",
       "chipLabel": "ঢাকা বিশ্ববিদ্যালয়ে ভর্তি",
       "category": "Education",
-      "overview": "(আগে থেকে তৈরি ডেমো) ঢাকা বিশ্ববিদ্যালয়ে আবেদন করতে অনলাইন ফরম পূরণ, ছবি আপলোড ও ইউনিটের আবেদন ফি পরিশোধ করতে হয়। এই সংরক্ষিত ২০২৫–২৬ উদাহরণটি বিজ্ঞান শাখার শিক্ষার্থীর বিজ্ঞান ইউনিটে আবেদনের জন্য: এসএসসি ২০২০–২৩, এইচএসসি ২০২৫ এবং চতুর্থ বিষয়সহ মোট জিপিএ অন্তত ৮.০, প্রতিটিতে ৩.৫। সেই আবেদন পর্ব শেষ হয়েছে; নিচের ধাপগুলোতে ওই পর্বের প্রক্রিয়া দেখানো হয়েছে।",
+      "overview": "(আগে থেকে তৈরি ডেমো) ঢাকা বিশ্ববিদ্যালয়ে আবেদন করতে অনলাইন ফরম পূরণ, ছবি আপলোড ও ইউনিটের আবেদন ফি পরিশোধ করতে হয়। এরপর প্রবেশপত্র নামিয়ে আসনবিন্যাস দেখে ভর্তি পরীক্ষায় অংশ নিন।",
       "steps": [
-        "বিজ্ঞান ইউনিটের পাসের বছর ও জিপিএর শর্ত মিলিয়ে নিন।",
+        "২০২৫–২৬ বিজ্ঞান ইউনিটের যোগ্যতা মিলিয়ে নিন: বিজ্ঞান শাখা, এসএসসি ২০২০–২৩, এইচএসসি ২০২৫ এবং চতুর্থ বিষয়সহ মোট জিপিএ অন্তত ৮.০, প্রতিটিতে ৩.৫।",
         "ঢাবির ভর্তি পোর্টালে এসএসসি/এইচএসসির বোর্ড, রোল ও পাসের বছর দিন।",
         "ঠিকানা, মোবাইল, পরীক্ষাকেন্দ্রের বিভাগ ও প্রযোজ্য কোটার তথ্য দিয়ে নির্ধারিত ছবি আপলোড করুন। বাবা/মায়ের এনআইডি নম্বর ঐচ্ছিক।",
         "অনলাইনে বা সোনালী, জনতা, অগ্রণী বা রূপালী ব্যাংকে ১,০৫০ টাকা দিয়ে নিশ্চিতকরণ রাখুন।",
@@ -279,7 +279,7 @@ const demos={
         "কোটায় আবেদন করলে প্রযোজ্য নথি"
       ],
       "fees": [
-        "২০২৫–২৬ বিজ্ঞান ইউনিটের আবেদন ফি: ১,০৫০ টাকা। এটি সেই বছরের আবেদন ফি, বিশ্ববিদ্যালয়ে চূড়ান্ত ভর্তি ফি নয়।"
+        "২০২৫–২৬ বিজ্ঞান ইউনিটের আবেদন ফি: ১,০৫০ টাকা।"
       ],
       "deadlines": [
         "আবেদন শুরু: ২৯ অক্টোবর ২০২৫ দুপুর ১২টা, ঢাকা সময়।",

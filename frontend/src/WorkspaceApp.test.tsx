@@ -58,7 +58,7 @@ it('uses a search-first home and opens prepared demos without requests or saved 
  const user=userEvent.setup();render(<WorkspaceApp initialLanguage="en"/>);await screen.findByRole('heading',{name:c.hero});
  expect(screen.queryByRole('button',{name:c.newSearch})).toBeNull();
  await user.click(screen.getByRole('button',{name:new RegExp('^'+c.retrievals)}));expect(screen.queryByRole('button',{name:c.newSearch})).toBeNull();
- await user.click(screen.getByRole('button',{name:new RegExp('^'+c.tasks)}));expect(screen.queryByRole('button',{name:c.newSearch})).toBeNull();await user.click(screen.getByRole('button',{name:c.home}));
+ await user.click(within(screen.getByRole('navigation',{name:'Main navigation'})).getByRole('button',{name:new RegExp('^'+c.tasks)}));expect(screen.queryByRole('button',{name:c.newSearch})).toBeNull();await user.click(screen.getByRole('button',{name:c.home}));
  expect(screen.queryByRole('button',{name:c.newSearch})).toBeNull();
  expect(screen.getByRole('button',{name:c.go})).toBeTruthy();await user.click(screen.getByRole('button',{name:/How do I apply for Dhaka University admission/}));
  expect(screen.queryByRole('button',{name:c.newSearch})).toBeNull();
@@ -70,10 +70,11 @@ it('uses a search-first home and opens prepared demos without requests or saved 
 it('saves a complete plan, persists task completion, and reopens without another request',async()=>{
  const view=render(<WorkspaceApp initialLanguage="en"/>);const user=await startQuick();
  await waitFor(async()=>expect((await loadWorkspace('guest')).retrievals).toHaveLength(1));
- expect(screen.queryByRole('button',{name:c.saveAll})).toBeNull();
- await waitFor(async()=>{const tasks=(await loadWorkspace('guest')).tasks;expect(tasks.length).toBeGreaterThan(0);expect(tasks.every(task=>task.saved)).toBe(true)});
+ await waitFor(async()=>{const tasks=(await loadWorkspace('guest')).tasks;expect(tasks.length).toBeGreaterThan(0);expect(tasks.every(task=>!task.saved)).toBe(true)});
+ await user.click(screen.getByRole('button',{name:c.saveAll}));
+ await waitFor(async()=>{const tasks=(await loadWorkspace('guest')).tasks;expect(tasks.filter(task=>task.origin?.startsWith('steps:')).every(task=>task.saved)).toBe(true);expect(tasks.filter(task=>task.origin?.startsWith('documents:')).every(task=>!task.saved)).toBe(true)});
  await user.click(screen.getAllByRole('checkbox')[0]);
- await user.click(screen.getByRole('button',{name:new RegExp('^'+c.tasks)}));
+ await user.click(within(screen.getByRole('navigation',{name:'Main navigation'})).getByRole('button',{name:new RegExp('^'+c.tasks)}));
  await user.click(await screen.findByText('Prepare for next week',{exact:true,selector:'.task-group-title'}));await screen.findAllByRole('textbox',{name:c.taskTitle});expect(screen.getAllByRole('checkbox')[0]).toHaveProperty('checked',true);
  const input=screen.getAllByRole('textbox',{name:c.taskTitle})[0];fireEvent.change(input,{target:{value:'My personal wording'}});
  await user.click(screen.getByRole('button',{name:'Open session'}));
@@ -85,10 +86,10 @@ it('saves a complete plan, persists task completion, and reopens without another
 it('uses the auto-save preference alone and keeps unsaved results out of storage until explicitly saved',async()=>{
  const user=userEvent.setup();render(<WorkspaceApp initialLanguage="en"/>);await screen.findByRole('heading',{name:c.hero});expect(screen.queryByRole('checkbox',{name:c.temporary})).toBeNull();await user.click(screen.getByRole('checkbox',{name:c.autoSave}));expect(localStorage.getItem('gochalo:auto-save')).toBe('false');
  await startQuick();expect((await loadWorkspace('guest')).retrievals).toEqual([]);
- expect(screen.queryByRole('button',{name:c.saveAll})).toBeNull();
+ expect(screen.getByRole('button',{name:c.saveAll})).toHaveProperty('disabled',false);
  expect((await loadWorkspace('guest')).tasks).toEqual([]);
  await user.click(screen.getByRole('button',{name:c.save}));await waitFor(async()=>expect((await loadWorkspace('guest')).retrievals).toHaveLength(1));
- await waitFor(async()=>{const tasks=(await loadWorkspace('guest')).tasks;expect(tasks.length).toBeGreaterThan(0);expect(tasks.every(task=>task.saved)).toBe(true)});
+ await waitFor(async()=>{const tasks=(await loadWorkspace('guest')).tasks;expect(tasks.length).toBeGreaterThan(0);expect(tasks.every(task=>!task.saved)).toBe(true)});
 });
 it('processes a link directly, keeps source provenance, and never claims a manual check',async()=>{
  result={...structuredClone(examples['en-general'].result),demo:false,source_reviewed:false,review_mode:'ai_reviewed',semantic_review_complete:true} as PlanResult;
@@ -118,12 +119,17 @@ it('automatically migrates guest history after sign-in without a confirmation di
 it('deletes a retrieval and its linked tasks after explicit confirmation',async()=>{
  const user=userEvent.setup();render(<WorkspaceApp initialLanguage="en"/>);await startQuick();await user.click(screen.getByRole('button',{name:new RegExp('^'+c.retrievals)}));
  await user.click(screen.getByRole('button',{name:c.delete+': Prepare for next week'}));await user.click(screen.getByRole('button',{name:c.confirmDelete}));
- expect(await screen.findByText(c.emptyRetrievals)).toBeTruthy();await user.click(screen.getByRole('button',{name:new RegExp('^'+c.tasks)}));expect(await screen.findByText(c.emptyTasks)).toBeTruthy();
+ expect(await screen.findByText(c.emptyRetrievals)).toBeTruthy();await user.click(within(screen.getByRole('navigation',{name:'Main navigation'})).getByRole('button',{name:new RegExp('^'+c.tasks)}));expect(await screen.findByText(c.emptyTasks)).toBeTruthy();
 });
 it('adds personal tasks with stable IDs and previews dates before calendar export',async()=>{
  const user=userEvent.setup();render(<WorkspaceApp initialLanguage="en"/>);await startQuick();
- await user.type(screen.getByRole('textbox',{name:c.taskTitle}),'Call the office');await user.click(screen.getByRole('button',{name:c.add}));
- await user.click(screen.getByRole('button',{name:new RegExp('^'+c.tasks)}));await user.click(await screen.findByText('Prepare for next week',{exact:true,selector:'.task-group-title'}));const title=await screen.findByDisplayValue('Call the office');expect(title).toHaveProperty('value','Call the office');
+ const taskSection=screen.getByRole('heading',{name:MIGRATION_COPY.en.steps}).closest('section')!;
+ expect(within(taskSection).getByLabelText(c.taskTitle)).toBeTruthy();
+ await user.type(within(taskSection).getByRole('textbox',{name:c.taskTitle}),'Call the office');await user.click(within(taskSection).getByRole('button',{name:c.add}));
+ await waitFor(async()=>expect((await loadWorkspace('guest')).tasks.find(task=>task.origin===null)?.saved).toBe(false));
+ await user.click(within(taskSection).getByRole('button',{name:c.saveAll}));
+ expect(await within(taskSection).findByText(c.tasksSavedHelp)).toBeTruthy();
+ await user.click(within(screen.getByRole('navigation',{name:'Main navigation'})).getByRole('button',{name:new RegExp('^'+c.tasks)}));await user.click(await screen.findByText('Prepare for next week',{exact:true,selector:'.task-group-title'}));const title=await screen.findByDisplayValue('Call the office');expect(title).toHaveProperty('value','Call the office');
  const group=title.closest('details')!;expect(group.open).toBe(true);await user.click(within(group).getByText('Prepare for next week',{exact:true}));expect(group.open).toBe(false);await user.click(within(group).getByText('Prepare for next week',{exact:true}));expect(group.open).toBe(true);
  const personalRow=within(title.closest('.task-editor')!);const date=personalRow.getByLabelText(c.due);fireEvent.change(date,{target:{value:'2026-11-02'}});fireEvent.change(personalRow.getByLabelText(c.time),{target:{value:'08:57'}});fireEvent.change(personalRow.getByLabelText(c.timezone),{target:{value:'UTC'}});
  await user.click(personalRow.getByRole('button',{name:c.calendar+': Call the office'}));const dialog=await screen.findByRole('dialog',{name:c.calendarTitle});
@@ -143,7 +149,7 @@ it('defaults to English and light, and localizes both navigation counts from the
  const user=userEvent.setup();render(<WorkspaceApp/>);
  await screen.findByRole('heading',{name:c.hero});expect(document.documentElement.classList.contains('dark')).toBe(false);
  expect(screen.getByRole('button',{name:/^Language:/}).textContent).toContain('English');
- expect(screen.getByRole('button',{name:new RegExp('^'+c.retrievals)}).querySelector('.nav-count')?.textContent).toBe('1');
+ await waitFor(()=>expect(screen.getByRole('button',{name:new RegExp('^'+c.retrievals)}).querySelector('.nav-count')?.textContent).toBe('1'));
  await user.click(screen.getByRole('button',{name:/^Language:/}));await user.click(screen.getByRole('menuitemradio',{name:'বাংলা'}));
  const bn=PRODUCT_COPY.bn;
  expect(screen.getByRole('button',{name:new RegExp('^'+bn.retrievals)}).querySelector('.nav-count')?.textContent).toBe('১');
@@ -191,23 +197,23 @@ it('keeps paste-text Enter multiline and ignores an empty Ask submission',async(
  await user.click(screen.getByRole('button',{name:new RegExp('^'+MIGRATION_COPY.en.text)}));const input=screen.getByRole('textbox',{name:c.input});await user.type(input,'First{Enter}Second');
  expect(input).toHaveProperty('value','First\nSecond');expect(fetch).not.toHaveBeenCalled();
 });
-it('resets one checklist without changing saved tasks, wording or schedules',async()=>{
- const row=createRetrieval({title:'Reset fixture',input:'Query',kind:'ask',language:'en',result});
- const tasks=candidateTasks(row).map(task=>({...task,saved:true,completed:true,dueDate:'2026-11-03',title:'Personal '+task.title}));
+it('explicitly saves tasks without resetting completion, wording or schedules',async()=>{
+ const row=createRetrieval({title:'Save fixture',input:'Query',kind:'ask',language:'en',result});
+ const tasks=candidateTasks(row).map(task=>({...task,saved:!task.origin?.startsWith('steps:'),completed:true,dueDate:'2026-11-03',title:'Personal '+task.title}));
  await saveWorkspace('guest',{...emptyData(),retrievals:[row],tasks});history.replaceState(null,'','#retrieval/'+row.id);
  const user=userEvent.setup();render(<WorkspaceApp/>);await screen.findByRole('textbox',{name:c.rename});
  const section=screen.getByRole('heading',{name:MIGRATION_COPY.en.steps}).closest('section')!;
- expect(section.querySelector('.step-number')).toBeNull();
+ expect(within(section).queryByRole('button',{name:POLISH_COPY.en.reset})).toBeNull();
  expect(within(section).getByRole('progressbar').getAttribute('aria-valuenow')).toBe(String(result.sections.steps.length));
- await user.click(within(section).getByRole('button',{name:POLISH_COPY.en.reset}));
- await waitFor(async()=>{const data=await loadWorkspace('guest');expect(data.tasks.filter(task=>task.origin?.startsWith('steps:')).every(task=>!task.completed)).toBe(true)});
- const data=await loadWorkspace('guest');expect(data.tasks.filter(task=>task.origin?.startsWith('documents:')).every(task=>task.completed)).toBe(true);
- expect(data.tasks.every(task=>task.saved&&task.dueDate==='2026-11-03'&&task.title.startsWith('Personal '))).toBe(true);
+ await user.click(within(section).getByRole('button',{name:c.saveAll}));
+ expect(await within(section).findByRole('link',{name:c.viewTasks})).toHaveProperty('hash','#tasks');
+ await waitFor(async()=>expect((await loadWorkspace('guest')).tasks.every(task=>task.saved)).toBe(true));
+ const data=await loadWorkspace('guest');expect(data.tasks.every(task=>task.completed&&task.dueDate==='2026-11-03'&&task.title.startsWith('Personal '))).toBe(true);
 });
 it('renames history inline, cancels edits, and switches Home panels without navigation',async()=>{
  const row=createRetrieval({title:'Original session',input:'Query',kind:'ask',language:'en',result});const tasks=candidateTasks(row).map(task=>({...task,saved:true}));
  await saveWorkspace('guest',{...emptyData(),retrievals:[row],tasks});const user=userEvent.setup();render(<WorkspaceApp/>);await screen.findByRole('heading',{name:c.hero});
- const recent=screen.getByRole('button',{name:POLISH_COPY.en.recent+' (1)'}),saved=screen.getByRole('button',{name:POLISH_COPY.en.savedTasks+' ('+tasks.length+')'});
+ const recent=await screen.findByRole('button',{name:POLISH_COPY.en.recent+' (1)'}),saved=screen.getByRole('button',{name:POLISH_COPY.en.savedTasks+' ('+tasks.length+')'});
  expect(recent.getAttribute('aria-pressed')).toBe('true');await user.click(saved);expect(saved.getAttribute('aria-pressed')).toBe('true');expect(location.hash).toBe('#home');await user.click(recent);
  await user.click(screen.getByRole('button',{name:c.rename+': Original session'}));const title=screen.getByRole('textbox',{name:c.rename});await user.clear(title);await user.type(title,'Edited session{Enter}');
  await waitFor(async()=>expect((await loadWorkspace('guest')).retrievals[0].title).toBe('Edited session'));
@@ -270,3 +276,56 @@ it('keeps a failed old-backend Ask draft without trying web Search',async()=>{
 });
 
 it('links to the public GitHub repository safely in a new tab',()=>{render(<WorkspaceApp/>);const link=screen.getByRole('link',{name:'GitHub (opens in a new tab)'});expect(link.getAttribute('href')).toBe('https://github.com/mahmudhasan-k/gochalo');expect(link.getAttribute('target')).toBe('_blank');expect(link.getAttribute('rel')).toContain('noopener')});
+
+it('shows a stable home and preserves typed input while storage initializes',async()=>{
+ render(<WorkspaceApp/>);
+ expect(screen.getByRole('heading',{name:c.hero})).toBeTruthy();
+ const query=screen.getByRole('textbox',{name:c.query});expect(query).toHaveProperty('disabled',false);
+ fireEvent.change(query,{target:{value:'Draft during startup'}});fireEvent.keyDown(query,{key:'Enter'});
+ expect(screen.getByRole('button',{name:c.go})).toHaveProperty('disabled',true);expect(fetch).not.toHaveBeenCalled();
+ await waitFor(()=>expect(screen.getByRole('button',{name:c.go})).toHaveProperty('disabled',false));
+ expect(query).toHaveProperty('value','Draft during startup');
+ await userEvent.click(screen.getByRole('button',{name:c.go}));await screen.findByRole('textbox',{name:c.rename});
+});
+it('saves a temporary plan and its added tasks only after the explicit task action',async()=>{
+ const user=userEvent.setup();render(<WorkspaceApp/>);await screen.findByRole('heading',{name:c.hero});
+ await user.click(screen.getByRole('checkbox',{name:c.autoSave}));await startQuick();
+ const section=screen.getByRole('heading',{name:MIGRATION_COPY.en.steps}).closest('section')!;
+ await user.type(within(section).getByRole('textbox',{name:c.taskTitle}),'Check with the office');await user.click(within(section).getByRole('button',{name:c.add}));
+ expect((await loadWorkspace('guest')).tasks).toEqual([]);
+ await user.click(within(section).getByRole('button',{name:c.saveAll}));
+ await waitFor(async()=>{const data=await loadWorkspace('guest');expect(data.retrievals).toHaveLength(1);expect(data.tasks.find(task=>task.origin===null)).toMatchObject({title:'Check with the office',saved:true});expect(data.tasks.filter(task=>task.origin?.startsWith('steps:')).every(task=>task.saved)).toBe(true)});
+ expect(await within(section).findByText(c.tasksSavedHelp)).toBeTruthy();
+});
+
+it('allows an additional task when a plan has no generated tasks',async()=>{
+ result.sections.steps=[];const user=userEvent.setup();render(<WorkspaceApp/>);await startQuick();
+ const section=screen.getByRole('heading',{name:MIGRATION_COPY.en.steps}).closest('section')!;
+ expect(within(section).getByRole('button',{name:c.saveAll})).toHaveProperty('disabled',true);
+ await user.type(within(section).getByRole('textbox',{name:c.taskTitle}),'Ask the office');await user.click(within(section).getByRole('button',{name:c.add}));
+ await user.click(within(section).getByRole('button',{name:c.saveAll}));
+ await waitFor(async()=>expect((await loadWorkspace('guest')).tasks.filter(task=>task.saved).map(task=>task.title)).toEqual(['Ask the office']));
+});
+it.each(['home','tasks'])('removes a whole saved task group from %s while preserving History and other groups',async route=>{
+ const row=createRetrieval({title:'Group to remove',input:'Original source',kind:'ask',language:'en',result});
+ const other=createRetrieval({title:'Keep this group',input:'Other source',kind:'ask',language:'en',result});
+ const groupTasks=candidateTasks(row).map((task,index)=>({...task,saved:true,completed:index===0,dueDate:'2026-11-03'}));
+ const personal={...groupTasks[0],id:crypto.randomUUID(),origin:null,title:'Personal follow-up',completed:false};
+ const otherTasks=candidateTasks(other).map(task=>({...task,saved:true}));
+ await saveWorkspace('guest',{...emptyData(),retrievals:[row,other],tasks:[...groupTasks,personal,...otherTasks]});
+ history.replaceState(null,'','#'+route);const user=userEvent.setup();const view=render(<WorkspaceApp/>);
+ const remove=await screen.findByRole('button',{name:c.removeGroup+': '+row.title});const group=remove.closest('details')!;
+ expect(group.open).toBe(false);await user.click(remove);expect(group.open).toBe(false);
+ const cancelled=await screen.findByRole('dialog',{name:c.removeGroup});expect(within(cancelled).getByText(c.removeGroupHelp)).toBeTruthy();
+ await user.click(within(cancelled).getByRole('button',{name:c.cancel}));
+ expect((await loadWorkspace('guest')).tasks.every(task=>task.saved)).toBe(true);
+ await user.click(screen.getByRole('button',{name:c.completed}));
+ await user.click(screen.getByRole('button',{name:c.removeGroup+': '+row.title}));
+ const dialog=await screen.findByRole('dialog',{name:c.removeGroup});await user.click(within(dialog).getByRole('button',{name:c.confirmRemoveGroup}));
+ await waitFor(async()=>{const data=await loadWorkspace('guest');expect(data.tasks.filter(task=>task.retrievalId===row.id).every(task=>!task.saved&&!task.deleted)).toBe(true);expect(data.tasks.filter(task=>task.retrievalId===other.id).every(task=>task.saved)).toBe(true)});
+ const data=await loadWorkspace('guest');expect(data.retrievals.find(plan=>plan.id===row.id)).toEqual(row);
+ expect(data.tasks.find(task=>task.id===personal.id)).toMatchObject({title:'Personal follow-up',completed:false,dueDate:'2026-11-03',deleted:false});
+ expect(data.tasks.find(task=>task.id===groupTasks[0].id)?.completed).toBe(true);
+ view.unmount();history.replaceState(null,'','#tasks');render(<WorkspaceApp/>);
+ expect(await screen.findByRole('button',{name:c.removeGroup+': '+other.title})).toBeTruthy();expect(screen.queryByRole('button',{name:c.removeGroup+': '+row.title})).toBeNull();
+});

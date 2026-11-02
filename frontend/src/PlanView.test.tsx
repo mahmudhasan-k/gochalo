@@ -11,6 +11,13 @@ import {MIGRATION_COPY,RESULT_ORDER} from './migrationCopy';
 import {SessionCard} from './SessionCard';
 beforeEach(()=>vi.stubGlobal('crypto',webcrypto));afterEach(()=>{cleanup();vi.restoreAllMocks();vi.unstubAllGlobals()});
 function sample(){return createRetrieval({input:examples['en-general'].source,kind:'text',language:'en',result:{...structuredClone(examples['en-general'].result),demo:false,source_reviewed:false} as PlanResult})}
+it('omits the routine source-scope banner while retaining incomplete-result and extraction warnings',()=>{
+ const row=sample(),noop=()=>{};row.result.partial=true;
+ const view=render(<PlanView row={row} tasks={candidateTasks(row)} lang="en" persistent status="Saved" onSave={noop} onRename={noop} onTask={noop} onSaveTasks={noop} onBack={noop} onEdit={noop} onCalendar={noop} onAdd={noop}/>);
+ expect(screen.queryByText(COPY.en.scope)).toBeNull();expect(view.container.querySelector('.plan-heading [role="note"]')).toBeNull();
+ expect(screen.getByText(COPY.en.partialHelp)).toBeTruthy();
+ const output=planSummary(row,[],'en');expect(output).not.toContain(COPY.en.scope);expect(output).toContain(COPY.en.partialHelp);expect(output).toContain(PRODUCT_COPY.en.sourceUnconfirmed);
+});
 it('shows readable History text while preserving the original source for copy',()=>{
  const row=sample(),noop=()=>{};row.input='[![Image 1: logo](https://example.com/logo.png)](https://example.com)\n## Passport fees\n**Regular:** BDT 4,025. [Payment instructions](https://example.com/pay)';row.result.sections.explanation=[];
  const original=row.input;

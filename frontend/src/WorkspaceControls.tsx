@@ -1,10 +1,17 @@
 import {useEffect,useLayoutEffect,useRef,useState,type InputHTMLAttributes,type TextareaHTMLAttributes} from 'react';
-import {Check,UploadCloud} from 'lucide-react';
+import {Check,UploadCloud,Calendar,Clock} from 'lucide-react';
 import {POLISH_COPY} from './uiCopy';
 import type {Lang} from './productTypes';
 
 export function Checkbox(props:InputHTMLAttributes<HTMLInputElement>){
  return <span className="checkbox-target"><input {...props} type="checkbox"/><span className="checkbox-box" aria-hidden="true"><Check size={14}/></span></span>;
+}
+const SCHEDULE_COPY={en:{date:'Date',time:'Time'},bn:{date:'তারিখ',time:'সময়'}};
+export function ScheduleField({type,label,lang='en',...props}:Omit<InputHTMLAttributes<HTMLInputElement>,'type'> & {type:'date'|'time';label:string;lang?:Lang}){
+ const ref=useRef<HTMLInputElement>(null),Icon=type==='date'?Calendar:Clock;
+ return <label className={"schedule-field"+(!props.value?" is-empty":"")} title={label} onClick={event=>{const field=ref.current;if(!field||field.disabled)return;if(event.target!==field)event.preventDefault();field.focus();try{field.showPicker?.()}catch{/* Native text entry remains available when a browser cannot open its picker. */}}}>
+  <Icon size={14} aria-hidden="true"/>{!props.value&&<span className="schedule-placeholder" aria-hidden="true">{SCHEDULE_COPY[lang][type]}</span>}<input {...props} ref={ref} type={type} aria-label={label}/>
+ </label>;
 }
 export function TaskTitle(props:TextareaHTMLAttributes<HTMLTextAreaElement>){
  const ref=useRef<HTMLTextAreaElement>(null);

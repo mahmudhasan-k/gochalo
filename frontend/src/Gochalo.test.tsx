@@ -3,7 +3,7 @@ import {afterEach,beforeEach,expect,it,vi} from 'vitest';
 import {cleanup,fireEvent,render,screen,waitFor,within} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {App} from '../legacy/LegacyJourney';
-import {ASK_COPY,COPY,JOURNEY_COPY,pageTitle} from './uiCopy';
+import {ASK_COPY,COPY,pageTitle} from './uiCopy';
 import {completionLabel} from './resultPresentation';
 import examples from '../public/examples.json';
 
@@ -90,11 +90,10 @@ it('omits progress bars for empty sections and preserves the prepared example co
  expect(screen.getByRole('progressbar',{name:COPY.en.documents}).getAttribute('aria-valuenow')).toBe('0');
 });
 
-it('keeps the current result until confirmation and starts a fresh plan in Ask',async()=>{
+it('starts a fresh plan in Ask with one click',async()=>{
  const user=userEvent.setup();render(<App initialLanguage="en"/>);await openNotice(user);
  await user.click(screen.getByRole('button',{name:COPY.en.new}));
- expect(screen.getByRole('heading',{name:COPY.en.result})).toBeTruthy();
- await user.click(screen.getByRole('button',{name:JOURNEY_COPY.en.confirmNew}));
+
  expect(screen.getByRole('button',{name:ASK_COPY.en.tab}).getAttribute('aria-pressed')).toBe('true');
  expect((screen.getByLabelText(ASK_COPY.en.input) as HTMLTextAreaElement).value).toBe('');
  expect(screen.queryByRole('heading',{name:COPY.en.result})).toBeNull();

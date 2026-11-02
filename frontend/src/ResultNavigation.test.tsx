@@ -5,18 +5,15 @@ import {ResultNavigation} from './ResultNavigation';
 import {COPY,JOURNEY_COPY} from './uiCopy';
 
 afterEach(()=>{cleanup();vi.unstubAllGlobals()});
-it.each(['bn','en'] as const)('protects the existing result before starting another notice in %s',async lang=>{
+it.each(['bn','en'] as const)('shows the warning and starts another plan on one click in %s',async lang=>{
  const user=userEvent.setup(),reset=vi.fn(),back=vi.fn(),j=JOURNEY_COPY[lang];
  render(<ResultNavigation lang={lang} example={false} onNew={reset} onBack={back}/>);
- await user.click(screen.getByRole('button',{name:COPY[lang].new}));
- expect(reset).not.toHaveBeenCalled();expect(screen.getByRole('status').textContent).toBe(j.resetPrompt);
- expect(document.activeElement).toBe(screen.getByRole('button',{name:j.keepResult}));
- await user.keyboard('{Escape}');expect(document.activeElement).toBe(screen.getByRole('button',{name:COPY[lang].new}));
- await user.click(screen.getByRole('button',{name:COPY[lang].new}));
- await user.click(screen.getByRole('button',{name:j.keepResult}));expect(reset).not.toHaveBeenCalled();
+ expect(screen.getByText(j.resetPrompt)).toBeTruthy();
+ const start=screen.getByRole('button',{name:COPY[lang].new});
+ expect(start.getAttribute('aria-describedby')).toBe(screen.getByText(j.resetPrompt).id);
+ await user.click(start);expect(reset).toHaveBeenCalledOnce();
+ expect(screen.queryByRole('button',{name:j.keepResult})).toBeNull();
  await user.click(screen.getByRole('button',{name:COPY[lang].edit}));expect(back).toHaveBeenCalledOnce();
- await user.click(screen.getByRole('button',{name:COPY[lang].new}));
- await user.click(screen.getByRole('button',{name:j.confirmNew}));expect(reset).toHaveBeenCalledOnce();
 });
 it('floats one set of controls until its footer is visible and disconnects on exit',()=>{
  let notify:(entries:{isIntersecting:boolean}[])=>void=()=>{};

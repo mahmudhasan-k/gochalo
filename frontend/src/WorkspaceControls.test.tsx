@@ -1,6 +1,6 @@
 import {act,cleanup,fireEvent,render,screen} from '@testing-library/react';
 import {afterEach,expect,it,vi} from 'vitest';
-import {ImageDropzone,useTypewriter} from './WorkspaceControls';
+import {ImageDropzone,useTypewriter,ScheduleField} from './WorkspaceControls';
 import {POLISH_COPY} from './uiCopy';
 afterEach(()=>{cleanup();vi.useRealTimers();vi.unstubAllGlobals();vi.restoreAllMocks()});
 function Placeholder({active=true,lang='en'}:{active?:boolean;lang?:'en'|'bn'}){const placeholder=useTypewriter(lang,active);return <input aria-label="Query" placeholder={placeholder}/>}
@@ -28,4 +28,14 @@ it('validates dropped and browsed files, preserves the existing selection on rej
  fireEvent.drop(drop,{dataTransfer:{files:[file]}});expect(onFile).toHaveBeenCalledWith(file);
  view.rerender(<ImageDropzone lang="en" disabled file={file} onFile={onFile}/>);fireEvent.drop(drop,{dataTransfer:{files:[file]}});expect(onFile).toHaveBeenCalledTimes(1);
  view.unmount();expect(revoke).toHaveBeenCalledWith('blob:preview');
+});
+
+it.each(['date','time'] as const)('opens the %s picker from the whole scheduling field and preserves native input',type=>{
+ const change=vi.fn();const view=render(<ScheduleField type={type} label="Schedule" onChange={change}/>);
+ const field=screen.getByLabelText('Schedule') as HTMLInputElement;const picker=vi.fn();Object.defineProperty(field,'showPicker',{configurable:true,value:picker});
+ fireEvent.click(field.closest('label')!);expect(picker).toHaveBeenCalledOnce();expect(document.activeElement).toBe(field);
+ fireEvent.click(field);expect(picker).toHaveBeenCalledTimes(2);
+ picker.mockImplementation(()=>{throw new DOMException('Picker unavailable')});fireEvent.click(field);
+ fireEvent.change(field,{target:{value:type==='date'?'2026-11-02':'09:30'}});expect(change).toHaveBeenCalledOnce();
+ view.rerender(<ScheduleField type={type} label="Schedule" disabled onChange={change}/>);picker.mockClear();fireEvent.click(field.closest('label')!);expect(picker).not.toHaveBeenCalled();
 });

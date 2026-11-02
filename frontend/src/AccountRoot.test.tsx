@@ -32,7 +32,18 @@ it('renders guest work while Clerk loads and preserves the draft when signed-out
  await screen.findByRole('heading',{name:PRODUCT_COPY.en.hero});
  const query=screen.getByRole('textbox',{name:PRODUCT_COPY.en.query});await user.type(query,'Keep this guest draft');
  expect(screen.getByRole('button',{name:PRODUCT_COPY.en.signIn})).toHaveProperty('disabled',true);
+ expect(mocks.tokens).toHaveLength(0);
  mocks.loaded=true;view.rerender(<AccountRoot/>);
  expect(screen.getByRole('textbox',{name:PRODUCT_COPY.en.query})).toBe(query);expect(query).toHaveProperty('value','Keep this guest draft');
  expect(screen.getByRole('button',{name:PRODUCT_COPY.en.signIn})).toHaveProperty('disabled',false);
+ expect(mocks.tokens).toHaveLength(0);expect(mocks.getToken).not.toHaveBeenCalled();
+});
+
+it('creates cloud access only after sign-in and keeps its credentials guarded after sign-out',async()=>{
+ const view=render(<AccountRoot/>);await screen.findByRole('heading',{name:PRODUCT_COPY.en.hero});
+ expect(mocks.tokens).toHaveLength(0);
+ mocks.userId='test_signed_in';mocks.getToken.mockResolvedValue('current-account-token');view.rerender(<AccountRoot/>);
+ expect(mocks.tokens).toHaveLength(1);const token=mocks.tokens[0];await expect(token()).resolves.toBe('current-account-token');
+ mocks.userId=null;view.rerender(<AccountRoot/>);
+ expect(mocks.tokens).toHaveLength(1);await expect(token()).rejects.toThrow('account_changed');
 });

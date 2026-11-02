@@ -33,7 +33,7 @@ export function PlanView({row:storedRow,tasks,lang,persistent,status,taskStorage
  const warning=demo?c.demo:result.review_mode==='general_ask'?ASK_COPY[lang].warning:result.review_mode==='web_research'?(result.semantic_review_complete?c.researchCheckedWarning:c.researchWarning):labels.scope;
  const renderSection=(key:string)=>{
   const items=result.sections[key]||[],checklist=key==='steps';
-  if(!items.length&&!checklist)return <section className={'plan-section section-'+key} key={key}><h2>{m[key as typeof RESULT_ORDER[number]]}</h2><p className="section-empty">{sectionEmpty(key,lang)}</p></section>;
+  if(!items.length&&!checklist)return <section className={'plan-section section-'+key} key={key}><h2>{m[key as typeof RESULT_ORDER[number]]}</h2><p className="section-empty">{sectionEmpty(key,lang)}</p>{result.section_states?.[key]==='partial'&&<p className="muted">{partialSection(lang)}</p>}</section>;
   return <section className={'plan-section section-'+key} key={key}>
    <div className="section-heading"><h2>{m[key as typeof RESULT_ORDER[number]]}</h2>{checklist&&<div className="checklist-actions">
     <span className="completion-badge">{done.toLocaleString(lang==='bn'?'bn-BD':'en-GB')}/{total.toLocaleString(lang==='bn'?'bn-BD':'en-GB')} {polish.completed}</span>

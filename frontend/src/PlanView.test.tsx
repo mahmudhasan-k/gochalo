@@ -8,8 +8,29 @@ import {ASK_COPY,COPY,POLISH_COPY} from './uiCopy';
 import {PRODUCT_COPY} from './productCopy';
 import examples from '../public/examples.json';
 import {MIGRATION_COPY,RESULT_ORDER} from './migrationCopy';
+import {SessionCard} from './SessionCard';
 beforeEach(()=>vi.stubGlobal('crypto',webcrypto));afterEach(()=>{cleanup();vi.restoreAllMocks();vi.unstubAllGlobals()});
 function sample(){return createRetrieval({input:examples['en-general'].source,kind:'text',language:'en',result:{...structuredClone(examples['en-general'].result),demo:false,source_reviewed:false} as PlanResult})}
+it('shows readable History text while preserving the original source for copy',()=>{
+ const row=sample(),noop=()=>{};row.input='[![Image 1: logo](https://example.com/logo.png)](https://example.com)\n## Passport fees\n**Regular:** BDT 4,025. [Payment instructions](https://example.com/pay)';row.result.sections.explanation=[];
+ const original=row.input;
+ const view=render(<SessionCard row={row} lang="en" onOpen={noop} onDelete={noop} onRename={noop}/>);
+ expect(view.container.querySelector('.session-card-content p')?.textContent).toBe('Passport fees Regular: BDT 4,025. Payment instructions');
+ expect(row.input).toBe(original);expect(planSummary(row,[],'en')).toContain(original);
+});
+it('explains empty overview and task sections in both languages and retains partial warnings',()=>{
+ const row=sample(),noop=()=>{};row.result.sections.explanation=[];row.result.sections.steps=[];row.result.section_states={explanation:'partial',steps:'partial'};
+ for(const lang of ['en','bn'] as const){
+  const view=render(<PlanView row={row} tasks={[]} lang={lang} persistent status="Saved" onSave={noop} onRename={noop} onTask={noop} onSaveTasks={noop} onBack={noop} onEdit={noop} onCalendar={noop} onAdd={noop}/>);
+  expect(view.container.querySelector('.section-explanation .section-empty')?.textContent).toBe(MIGRATION_COPY[lang].emptyOverview);
+  expect(view.container.querySelector('.section-steps .section-empty')?.textContent).toBe(MIGRATION_COPY[lang].emptyTasks);
+  expect(view.container.querySelector('.section-explanation .muted')).toBeTruthy();
+  expect(view.container.querySelector('.section-steps .muted')).toBeTruthy();
+  expect(screen.getByRole('textbox',{name:PRODUCT_COPY[lang].taskTitle})).toBeTruthy();
+  expect(planSummary(row,[],lang)).toContain(MIGRATION_COPY[lang].emptyOverview);
+  expect(planSummary(row,[],lang)).toContain(MIGRATION_COPY[lang].emptyTasks);view.unmount();
+ }
+});
 it('preserves exact quotations, local conditions, original input and human-review disclosure in copy',()=>{
  const row=sample(),tasks=candidateTasks(row);tasks[0].completed=true;const output=planSummary(row,tasks,'en');
  for(const evidence of row.result.evidence)expect(output).toContain(evidence.excerpt);

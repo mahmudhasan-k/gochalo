@@ -37,7 +37,7 @@ export function PlanView({row:storedRow,tasks,lang,persistent,status,taskStorage
   return <section className={'plan-section section-'+key} key={key}>
    <div className="section-heading"><h2>{m[key as typeof RESULT_ORDER[number]]}</h2>{checklist&&<div className="checklist-actions">
     <span className="completion-badge">{done.toLocaleString(lang==='bn'?'bn-BD':'en-GB')}/{total.toLocaleString(lang==='bn'?'bn-BD':'en-GB')} {polish.completed}</span>
-    {!demo&&<button className="primary save-plan-tasks no-print" disabled={!actionTasks.length||allTasksSaved} onClick={onSaveTasks}>{allTasksSaved?<Check size={16}/>:<Bookmark size={16}/>} {allTasksSaved?c.tasksSavedButton:c.saveAll}</button>}
+    {!demo&&<button className="save-plan-tasks no-print" disabled={!actionTasks.length||allTasksSaved} onClick={onSaveTasks}>{allTasksSaved?<Check size={14}/>:<Bookmark size={14}/>} {allTasksSaved?c.tasksSavedButton:c.saveAll}</button>}
    </div>}</div>
    {checklist&&allTasksSaved&&!demo&&<p className="task-save-feedback no-print" role="status"><Check size={15} aria-hidden="true"/>{c.tasksSavedHelp} <a href="#tasks">{c.viewTasks}</a></p>}
    {result.section_states?.[key]==='partial'&&<p className="muted">{partialSection(lang)}</p>}

@@ -35,7 +35,7 @@ it('starts in Bangla with Ask selected and preserves independent drafts across l
  expect(screen.getByRole('button',{name:'বাংলা'}).getAttribute('lang')).toBe('bn');
  expect(screen.getByRole('button',{name:ASK_COPY.bn.tab}).getAttribute('aria-pressed')).toBe('true');
  await user.click(screen.getByRole('button',{name:COPY.bn.link}));
- await user.type(screen.getByLabelText('ওয়েব পাতার লিংক'),'https://example.gov.bd/a');
+ await user.type(screen.getByLabelText(COPY.bn.linkLabel),'https://example.gov.bd/a');
  await user.click(screen.getByRole('button',{name:'English'}));
  expect((screen.getByLabelText('Public page URL') as HTMLInputElement).value).toBe('https://example.gov.bd/a');
  await user.click(screen.getByRole('button',{name:COPY.en.text}));

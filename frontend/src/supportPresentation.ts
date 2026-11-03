@@ -1,5 +1,5 @@
 import type {Claim} from './productTypes';
-export const SOURCE_RECOVERY_COPY={en:{edit:'Edit extracted text'},bn:{edit:'নেওয়া লেখাটি সম্পাদনা করুন'}};
+export const SOURCE_RECOVERY_COPY={en:{edit:'Edit extracted text'},bn:{edit:'উৎস থেকে নেওয়া লেখাটি সম্পাদনা করুন'}};
 export function supportLabel(item:Claim,lang:'bn'|'en'){
  const bn=lang==='bn';
  switch(item.support_status){

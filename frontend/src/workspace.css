@@ -150,3 +150,13 @@ button,input,textarea,select{font:inherit;color:inherit}button,a,input,textarea,
 
 .task-group>summary .task-group-remove{flex:0 0 32px;min-width:32px;min-height:32px;padding:6px;color:var(--text-muted)}
 .task-group>summary .task-group-remove:hover:enabled{color:var(--text-error)}
+
+/* Bangla reading sizes; heading/control sizes and print typography stay unchanged. */
+@media screen {
+html:lang(bn) .plan-item p:lang(bn),html:lang(bn) .uncertainty-topic li:lang(bn),html:lang(bn) .source-panel pre:lang(bn){font-size:15px;line-height:1.8}
+html:lang(bn) .check-row:lang(bn){font-size:14px;line-height:1.8}
+html:lang(bn) .conditions:lang(bn){font-size:13px;line-height:1.8}
+html:lang(bn) :is(.notice,.section-empty,.hero-subtitle,.feature-card-detail,.question-help p):lang(bn){font-size:13px;line-height:1.8}
+html:lang(bn) .privacy-note:lang(bn){font-size:12px;line-height:1.8}
+}
+@media screen and (max-width:600px){html:lang(bn) .check-row:lang(bn){font-size:13px}html:lang(bn) .feature-card-detail:lang(bn),html:lang(bn) .privacy-note:lang(bn){font-size:12px}}
